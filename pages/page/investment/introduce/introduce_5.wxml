@@ -1,0 +1,34 @@
+<view class="page" style="background-color:#fff;">
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">产业规划
+</view>
+            <view class="weui-article__section">
+              
+                <view class="weui-article__section">
+                    <view class="weui-article__h3 tc-text-primary">汽车及零件</view>
+                    <view class="weui-article__p">
+                        重点发展发动机系统、汽车电子与控制、汽车轻量化设计、传动系统等核心零部件研发、制造及整车和核心配套项目水平；积极培育汽车设计、展示、体验等基于制造环节的流通和服务市场，大力发展汽车进出口贸易，形成研发、制造、国际贸易一体化的全国知名汽车产业基地。
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3 tc-text-primary">高端先进制造业</view>
+                    <view class="weui-article__p">
+                       立足现有制造业基础，面准生产体系的高端，大力发展装备制造、机器人、电子信息、生物医药、新材料、新能源、光机电一体化等具有较高附加值和技术含量的高端装备制造产业和战略性新兴产业，打造技术知识密集、成长性好、关联性强的多领域高精尖技术产业聚集区。
+
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3 tc-text-primary">新能源、新材料</view>
+                    <view class="weui-article__p">
+                        重点推动纯电动汽车和插电式混合动力汽车产业上下游产业链发展，突破高性能动力电池、电机、电控等关键零部件和材料核心技术；发展以轻质合金与金属基复合材料技术开发的现代交通工具用铝合金板材及零部件等，同时建立起比较完整的产业技术支撑平台和产业配套体系。
+
+
+                    </view>
+                </view>
+
+
+            </view>
+        </view>
+    </view>
+</view>

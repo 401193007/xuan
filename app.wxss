@@ -1,0 +1,160 @@
+@import "common/weui.wxss"; 
+@import "common/common.wxss";
+@import "common/iconfonts.wxss";
+@import "pages/page/affair/common/common.wxss";
+
+
+page  {
+    background-color: #f2f2f2;
+}
+.page__hd {
+
+}
+.page__bd {
+    padding-bottom: 40px;
+}
+
+.page__ft{
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.page__title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.page__desc {
+    margin-top: 5px;
+    color: #888888;
+    text-align: left;
+    font-size: 14px;
+}
+.weui-vcode-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+.tc-group {
+    margin : 15px;
+}
+.tc-pull-left {
+    float: left;
+}
+.tc-pull-right {
+    float: right;
+}
+[class*=tc-btn-] {
+   color : #fff !important;
+}
+.tc-btn-primary {
+    background-color:#4891d1 !important;
+}
+.tc-btn-success {
+    background-color:#5dc756 !important;
+}
+.tc-text-default {
+    color :#999;
+}
+.tc-text-primary {
+    color : #4891d1;
+}
+.tc-text-success {
+    color : #5dc756;
+}
+.tc-text-danger {
+    color :#dd514c;
+}
+.cell-icon {
+    margin-right: 5px;
+    vertical-align: middle;
+    width:20px;
+    height: 20px;    
+}
+.tc-clearfix:after {
+  content: '';
+  clear : both;
+  display: table;
+}
+button {
+  font-size: 14px;
+  line-height: 38px;
+}
+/*step*/
+.step_top {
+    background-color: #fff;
+    padding: 15px;
+}
+.step_top .step_subtitle {
+    color : #999;
+    font-size: 14px;
+}
+.step_context {
+    margin: 15px;
+    line-height: 1;
+}
+.step-btn_group:after {
+    content : '';
+    display: table;
+    clear:both;
+}
+.step-btn_group .weui-btn {
+    margin:0;
+}
+
+
+.table {
+  border: 0px solid darkgray;
+  margin-top: 15px;
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: auto;
+  align-items: center;
+  padding: 5px 0;
+}
+.td {
+    width:40%;
+    justify-content: center;
+    text-align: center;
+}
+.bg-w{
+  background: snow;
+}
+.bg-g{
+  background: #E6F3F9;
+}
+.th {
+  width: 40%;
+  justify-content: center;
+  color: #333;
+  display: flex;
+  height:3rem;
+  align-items: center;
+}
+.weui-cells__title.subtitle {
+  color : #999;
+  font-size: 12px;
+}
+.address {
+  text-align: center;
+  padding:5px;
+}
+.weui-select {
+  font-size:14px;
+}
+.disabled {
+  background-color : #e6e6e6 !important;
+}
+.weui-navbar {
+  z-index: 1;
+}
+.weui-toptips.subToptips {
+  position: absolute;
+  top : 50px;
+  z-index: 2;
+}

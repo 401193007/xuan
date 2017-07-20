@@ -1,0 +1,107 @@
+  <view class="navbar">
+    <view class="tc-clearfix navbar-header">
+
+      <view class="tc-pull-left nav-toggle" bindtap="navToggle">
+        <view class="icon-bar"></view>
+        <view class="icon-bar"></view>
+        <view class="icon-bar"></view>
+      </view>  
+
+      <view class="tc-pull-right dropdown-toggle" bindtap="dropdownToggle">
+          <text>{{staffName}}</text>
+          <image src="../../../../image/icon-user.png" class="icon-user"></image>
+      </view>
+    </view>
+   
+    <view class="navbar-default"> 
+      <view class="sidebar-nav {{navHide? '' : 'show'}}">
+
+          <view class="nav-list">
+          
+              <navigator class="nav" hover-class="none" url="../index/index" open-type="redirect">
+                <text>首页</text>
+              </navigator> 
+
+          </view> 
+
+         
+        <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+          <view class="nav-list">
+          
+            <view class="nav {{item.open? 'active' : ''}}" id="{{item.id}}" catchtap="itemToggle">
+                <text>{{item.name}}</text>  
+                <image src="../../../../image/icon-blue-arrow.png" class="icon-arrow" wx:if="{{item.pages.length > 0 }}"></image>
+            </view> 
+            
+
+            <view class="nav-second-level dropdown-ani {{item.open? 'show' : ''}}">
+         
+              <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
+                <navigator class="nav" hover-class="none" url="../{{page.page}}/{{page.page}}" open-type="redirect">
+                  <text>{{page.text}}</text>
+                </navigator>
+              </block>        
+            </view>   
+
+          </view>          
+        </block>
+      </view>
+
+      <view class="dropdown-menu {{dropdownHide? '' : 'show'}}">
+          <navigator class="menu" url="../modify_information/modify_information">
+              <text>修改信息</text>  
+          </navigator>  
+          <view class="menu" catchtap="logout">
+              <text>退出登录</text>  
+          </view>                    
+      </view> 
+
+    </view>
+  </view>
+
+
+
+  <!--<view class="navbar">
+    <view class="tc-clearfix navbar-header">
+
+      <view class="tc-pull-left nav-toggle" bindtap="navToggle">
+        <view class="icon-bar"></view>
+        <view class="icon-bar"></view>
+        <view class="icon-bar"></view>
+      </view>  
+
+      <view class="tc-pull-right dropdown-toggle" bindtap="dropdownToggle">
+          <text>{{staffName}}</text>
+          <image src="../../../../image/icon-user.png" class="icon-user"></image>
+      </view> 
+      <view class="dropdown-menu {{dropdownHide? '' : 'show'}}">
+          <navigator class="menu">
+              <text>修改信息</text>  
+          </navigator>  
+          <navigator class="menu">
+              <text>退出登录</text>  
+          </navigator>                    
+      </view>
+
+    </view>
+    <view class="navbar-default"> 
+      <view class="sidebar-nav {{navHide? '' : 'show'}}">
+        <navigator class="nav active">
+            <text>首页</text>  
+            <image src="../../../../image/icon-blue-arrow.png" class="icon-arrow"></image>
+        </navigator>
+        <navigator class="nav">
+            <text>员工档案</text> 
+            <image src="../../../../image/icon-blue-arrow.png" class="icon-arrow"></image> 
+        </navigator>
+        <navigator class="nav">
+            <text>社保相关</text>  
+            <image src="../../../../image/icon-blue-arrow.png" class="icon-arrow"></image>
+        </navigator>
+        <navigator class="nav">
+            <text>考勤管理</text>  
+            <image src="../../../../image/icon-blue-arrow.png" class="icon-arrow"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>-->

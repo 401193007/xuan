@@ -1,0 +1,8 @@
+<template name="step_head">
+    <view class="step_top">
+        <view class="step_title">{{title}}</view>
+        <view class="step_subtitle">{{subtitle}}</view>
+    </view>
+</template>
+
+

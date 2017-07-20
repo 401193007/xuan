@@ -1,0 +1,27 @@
+.weui-grid {
+  background-color: #fff;
+}
+
+.iconfont {
+  text-align: center;
+  font-size:24px;
+}
+
+.iconfont.icon-iconfontqiandao {
+  color:#f17c67;
+}
+
+.iconfont.icon-xiugaimima {
+  color:#57d2f7;
+}
+
+.iconfont.icon-gengduo {
+  color:#c9cabb;
+}
+
+.iconfont.icon-qingjia {
+  color:#66cc99;
+}
+.weui-grid__label {
+  color:#999;
+}

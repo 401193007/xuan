@@ -1,0 +1,5 @@
+/* pages/page/affair/modify_information/modify_information.wxss */
+.weui-toptips {
+  top : 50px;
+  z-index: 2;
+}

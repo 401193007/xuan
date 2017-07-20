@@ -1,0 +1,74 @@
+<import src="step_head" />
+
+<template is="step_head" data="{{title: '申请招商引资',subtitle: '第二步'}}"/>
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view> 
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>  
+        <form bindsubmit="step_2" bindreset="formReset">
+
+            <view class="step_context">目前企业纳税情况（每月）：</view>
+
+            <view class="weui-cells__title">增值税</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" placeholder="请输入增值税" name="added_tat"/>
+                    </view>
+                </view>
+            </view>
+
+            <view class="weui-cells__title">所得税</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" placeholder="请输入所得税" name="income_tax"/>
+                    </view>
+                </view>
+            </view>
+
+            <view class="weui-cells__title">总计</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" placeholder="请输入总计" name="total"/>
+                    </view>
+                </view>
+            </view>                               
+
+            <view class="step_context">意向在天津缴纳税额（每月）：</view>
+
+            <view class="weui-cells__title">意向增值税</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" placeholder="请输入意向增值税" name="will_added_tat"/>
+                    </view>
+                </view>
+            </view>
+
+            <view class="weui-cells__title">意向所得税</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" placeholder="请输入意向所得税" name="will_income_tax"/>
+                    </view>
+                </view>
+            </view>
+
+            <view class="weui-cells__title">总计</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" placeholder="请输入总计" name="will_total"/>
+                    </view>
+                </view>
+            </view>  
+
+
+            <view class="tc-group">
+                <button class="weui-btn tc-btn-primary" formType="submit">下一步</button>
+            </view>
+        </form>           
+    </view>
+</view>

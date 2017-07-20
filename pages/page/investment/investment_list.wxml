@@ -1,0 +1,25 @@
+<block wx:if="{{len == 0}}">
+  <view class="iconfont icon-nothing" style="font-size:72px;text-align:center;font-weight：700;line-height:1.2;margin-top:20px;"></view>
+  <view style="text-align:center;font-size:14px;color:#999;">暂没有内容</view>
+</block>
+
+<block wx:if="{{len > 0}}">
+  <view class="weui-panel">
+      <view class="weui-panel__bd">
+          <navigator class="weui-media-box weui-media-box_text"  wx:for="{{list}}"  url="investment_details?thisId={{item.id}}">
+              <view class="weui-media-box__title weui-media-box__title_in-text">{{item.name}}</view>
+              <view class="weui-media-box__desc">项目负责人：{{item.leading}}</view>
+              <view class="weui-media-box__info">
+                  <view class="weui-media-box__info__meta">状态：
+                      <block wx:if="{{item.status == 0}}"><text class="tc-text-danger">{{item.statusCN}}</text></block>
+                      <block wx:if="{{item.status == 1}}"><text class="tc-text-primary">{{item.statusCN}}</text></block>
+                      <block wx:if="{{item.status == 2}}"><text class="tc-text-success">{{item.statusCN}}</text></block>
+
+                  </view>
+                  <view class="weui-media-box__info__meta">提交时间：{{item.add_time}}</view>
+              </view>          
+          </navigator>                    
+      </view>
+  </view>
+</block>
+

@@ -1,0 +1,520 @@
+  <include src="../top/top"/>
+
+  <view class="page-wrap">
+    <view class="page-head">
+      <text>首页</text> > <text>完善资料</text>
+    </view>   
+
+    <view class="page-container">
+      <view class="title">基本资料</view> 
+
+      <form catchsubmit="formSubmit" catchreset="formReset">
+
+        <view class="page-section">
+          <view class="page-section-title">个人情况</view>
+
+          <view class="page-section-body">
+
+            <view class="tc-group">
+              <view class="weui-cells__title">姓名</view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input disabled">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="{{staffName}}" name="name" disabled/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">手机号码</view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input disabled">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="{{mobile}}" name="mobile" disabled/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">身份证号码</view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input disabled">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="{{id_number}}" name="id_number" disabled/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">性别  <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_select">
+                      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                          <view class="weui-label">请选择</view>
+                      </view>
+                      <view class="weui-cell__bd">
+                          <picker bindchange="bindSexChange" range="{{sex}}" value="{{sexIndex}}" range-key="{{'text'}}" name="sex">
+                              <view class="weui-select weui-select_in-select-after">{{sex[sexIndex].text}}</view>
+                          </picker>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">E-mail <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入E-mail" name="email"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">学历： <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_select">
+                      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                          <view class="weui-label">请选择</view>
+                      </view>
+                      <view class="weui-cell__bd">
+                          <picker bindchange="bindEducationChange" range="{{education}}" value="{{educationIndex}}" range-key="{{'text'}}" name="education">
+                              <view class="weui-select weui-select_in-select-after">{{education[educationIndex].text}}</view>
+                          </picker>
+                      </view>
+                  </view>
+              </view>            
+            </view>  
+
+            <view class="tc-group">
+              <view class="weui-cells__title">专业 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入专业" name="major"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">籍贯 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_select">
+                      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                          <view class="weui-label">省份</view>
+                      </view>
+                      <view class="weui-cell__bd">
+                          <picker bindchange="bindProvinceChange" range="{{province}}" value="{{provinceIndex}}" range-key="{{'areaname'}}" id="{{province[provinceIndex].id}}"  name="provinceID">
+                              <view class="weui-select weui-select_in-select-after" >{{province[provinceIndex].areaname}}</view>
+                          </picker>
+                      </view>
+                  </view>
+              </view> 
+              <view class="weui-cells weui-cells_after-title" style="margin-top:10px;">
+                  <view class="weui-cell weui-cell_select">
+                      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                          <view class="weui-label">城市</view>
+                      </view>
+                      <view class="weui-cell__bd">
+                          <picker bindchange="bindCityChange" range="{{city}}" value="{{cityIndex}}"  range-key="{{'areaname'}}" id="{{city[cityIndex].id}}"  name="cityID">
+                              <view class="weui-select weui-select_in-select-after">{{city[cityIndex].areaname}}</view>
+                          </picker>
+                      </view>
+                  </view>
+              </view>                          
+            </view>   
+
+            <view class="tc-group">
+              <view class="weui-cells__title">婚育状况 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_select">
+                      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                          <view class="weui-label">请选择</view>
+                      </view>                  
+                      <view class="weui-cell__bd">
+                          <picker bindchange="bindMaritalChange" range="{{marital}}" value="{{maritalIndex}}" range-key="{{'text'}}" name="marital">
+                              <view class="weui-select weui-select_in-select-after">{{marital[maritalIndex].text}}</view>
+                          </picker>
+                      </view>
+                  </view>
+              </view>            
+            </view>    
+
+            <view class="tc-group">
+              <view class="weui-cells__title">户口性质 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_select">
+                      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                          <view class="weui-label">请选择</view>
+                      </view>
+                      <view class="weui-cell__bd">
+                          <picker bindchange="bindanMelden_natureIndexlChange" range="{{anmelden_nature}}" value="{{anmelden_natureIndex}}" range-key="{{'text'}}" name="anmelden_nature">
+                              <view class="weui-select weui-select_in-select-after">{{anmelden_nature[anmelden_natureIndex].text}}</view>
+                          </picker>
+                      </view>
+                  </view>
+              </view>            
+            </view> 
+
+            <view class="tc-group">
+              <view class="weui-cells__title">户籍所在地 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入户籍所在地" name="anmelden_address"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">家庭现住址 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入家庭现住址" name="residential_address"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="subtitle">紧急联络人</view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">联络人姓名 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入联络人姓名" name="ecp_name"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">关系 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入关系" name="ecp_relation"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">联络人手机号码 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入联络人手机号码" name="ecp_mobile"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>            
+          </view>
+        </view>
+
+        <view class="page-section">
+          <view class="page-section-title">上一单位工作经历</view>
+
+          <view class="page-section-body">
+
+            <view class="tc-group">
+              <view class="weui-cells__title">单位名称 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入单位名称" name="last_work_unit_name"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+                <view class="weui-cells__title">起始时间 <text class="tc-text-danger">*</text></view>
+                <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                      <view class="weui-label">请选择</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                      <picker mode="date" value="{{date1}}" start="2015-09-01"  bindchange="bindDateChange1" name="last_work_start">
+                        <view class="weui-input">{{date1}}</view>
+                      </picker>
+                    </view>
+                  </view>
+                </view>           
+            </view>
+
+            <view class="tc-group">
+                <view class="weui-cells__title">终止时间 <text class="tc-text-danger">*</text></view>            
+                <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                      <view class="weui-label">请选择</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                      <picker mode="date" value="{{date2}}" start="2015-09-01"  bindchange="bindDateChange2" name="last_work_end">
+                        <view class="weui-input">{{date2}}</view>
+                      </picker>
+                    </view>
+                  </view>
+                </view>  
+            </view>    
+
+            <view class="tc-group">
+              <view class="weui-cells__title">职位 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入职位" name="last_work_position"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">离职原因 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入离职原因" name="last_work_dimission_reason"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">证明人 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入证明人" name="last_work_certifier_name"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">证明人电话 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入证明人电话" name="last_work_certifier_phone"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>          
+
+          </view>
+        </view>
+
+        <view class="page-section">
+          <view class="page-section-title">健康状况</view>
+
+          <view class="page-section-body">
+
+            <view class="tc-group">
+              <view class="weui-cells__title">是否患有肝炎、肿瘤、癌症、白血病 、精神病、癫痫病等影响正常工作及不适宜工作的疾病 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_select">
+                      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                          <view class="weui-label">请选择</view>
+                      </view>                   
+                      <view class="weui-cell__bd">
+                          <picker bindchange="bindSexChange" range="{{health_info_1}}" value="{{health_info_1Index}}" range-key="{{'text'}}"  name="health_info_1">
+                              <view class="weui-select weui-select_in-select-after">{{health_info_1[health_info_1Index].text}}</view>
+                          </picker>
+                      </view>
+                  </view>
+              </view>              
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">是否有上述疾病的家族遗传史 <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_select">
+                      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                          <view class="weui-label">请选择</view>
+                      </view>                   
+                      <view class="weui-cell__bd">
+                          <picker bindchange="bindSexChange" range="{{health_info_2}}" value="{{health_info_2Index}}" range-key="{{'text'}}"  name="health_info_2">
+                              <view class="weui-select weui-select_in-select-after">{{health_info_2[health_info_2Index].text}}</view>
+                          </picker>
+                      </view>
+                  </view>
+              </view>             
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">是否处于孕期。（适用女职工） <text class="tc-text-danger">*</text></view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_select">
+                      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                          <view class="weui-label">请选择</view>
+                      </view>                   
+                      <view class="weui-cell__bd">
+                          <picker bindchange="bindSexChange" range="{{health_info_3}}" value="{{health_info_3Index}}" range-key="{{'text'}}"  name="health_info_3">
+                              <view class="weui-select weui-select_in-select-after">{{health_info_3[health_info_3Index].text}}</view>
+                          </picker>
+                      </view>
+                  </view>
+              </view>              
+            </view>        
+
+          </view>
+        </view>
+
+        <view class="page-section">
+          <view class="page-section-title">家庭成员</view>
+
+          <view class="page-section-body">
+
+              <view class="tc-group">
+                <view class="weui-cells__title">姓名</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" placeholder="请输入姓名" name="family_member_name"/>
+                        </view>
+                    </view>
+                </view>            
+              </view>
+
+              <view class="tc-group">
+                <view class="weui-cells__title">关系</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" placeholder="请输入关系" name="family_member_relation"/>
+                        </view>
+                    </view>
+                </view>            
+              </view>
+
+              <view class="tc-group">
+                <view class="weui-cells__title">工作单位及职务</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" placeholder="请输入工作单位及职务" name="family_member_job"/>
+                        </view>
+                    </view>
+                </view>            
+              </view>  
+
+              <view class="tc-group">
+                <view class="weui-cells__title">联系电话</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" placeholder="请输入联系电话" name="family_member_mobile"/>
+                        </view>
+                    </view>
+                </view>            
+              </view>                      
+
+          </view>
+        </view>      
+
+        <view class="page-section">
+          <view class="page-section-title">教育经历</view>
+
+          <view class="page-section-body">
+
+            <view class="tc-group">
+                <view class="weui-cells__title">起止时间</view>
+                <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                      <view class="weui-label">请选择</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                      <picker mode="date" value="{{education_start}}" start="2015-09-01"  bindchange="education_start" name="education_start">
+                        <view class="weui-input">{{education_start}}</view>
+                      </picker>
+                    </view>
+                  </view>
+                </view>           
+            </view>
+
+            <view class="tc-group">
+                <view class="weui-cells__title">终止时间</view>
+                <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                      <view class="weui-label">请选择</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                      <picker mode="date" value="{{education_end}}" start="2015-09-01"  bindchange="education_end" name="education_end">
+                        <view class="weui-input">{{education_end}}</view>
+                      </picker>
+                    </view>
+                  </view>
+                </view>  
+            </view> 
+
+              <view class="tc-group">
+                <view class="weui-cells__title">学历</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" placeholder="请输入学历" name="education_"/>
+                        </view>
+                    </view>
+                </view>            
+              </view>  
+
+              <view class="tc-group">
+                <view class="weui-cells__title">专业</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" placeholder="请输入专业" name="education_maior"/>
+                        </view>
+                    </view>
+                </view>            
+              </view>   
+
+              <view class="tc-group">
+                <view class="weui-cells__title">学校</view>
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" placeholder="请输入学校" name="education_school"/>
+                        </view>
+                    </view>
+                </view>            
+              </view>                      
+
+          </view>
+        </view> 
+
+        <checkbox-group bindchange="bindAgreeChange">
+            <label class="weui-agree" for="weuiAgree">
+                <view class="weui-agree__text">
+                    <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" name="promise"/>
+                    <view class="weui-agree__checkbox-icon">
+                        <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+                    </view>
+                    本人保证以上填写资料完全属实，若有虚假将自愿接受因信息违纪辞退而无须任何补偿
+                </view>
+            </label>
+        </checkbox-group>        
+
+        <view class="btn-area">
+          <button type="primary" formType="submit" class="tc-btn-primary">提交</button>
+        </view>
+      </form>
+    </view>
+    
+  </view>
+
+

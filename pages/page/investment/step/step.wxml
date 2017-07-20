@@ -1,0 +1,12 @@
+<block wx:if="{{route=='step_1'}}">
+  <include src="step_1"/>
+</block>
+<block wx:if="{{route=='step_2'}}">
+  <include src="step_2"/>
+</block>
+<block wx:if="{{route=='step_3'}}">
+  <include src="step_3"/>
+</block>
+<block wx:if="{{route=='step_4'}}">
+  <include src="step_4"/>
+</block>

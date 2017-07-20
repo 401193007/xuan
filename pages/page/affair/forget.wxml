@@ -1,0 +1,63 @@
+<import src="common/common" />
+<template is="commonBg" data="{{windowHeight : windowHeight,windowWidth : windowWidth}}"/>
+
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>  
+
+<view class="common-panel">
+
+  <template is="commonTop"/>
+
+  <view class="common-panel-rb">
+    <view class="tabs-panel">
+      <text class="name panel-top">找回密码第一步</text>
+
+      <form bindsubmit="formSubmit" bindreset="formReset">
+          
+          <view class="weui-cells__title">身份证号码</view>
+          <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__bd">
+                      <input class="weui-input" placeholder="身份证号码" name="id_number"/>
+                  </view>
+              </view>
+          </view>
+
+          <view class="weui-cells__title">验证码</view>
+          <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_input code">
+                  <view class="weui-cell__bd">
+                      <input class="weui-input" placeholder="图片验证码" name="captcha"/>
+                  </view>                 
+              </view>
+              <view class="code-img">
+                  <view style="background-color:#c8c8c8;height:100%;width:90%;margin-left:10%;">
+                    <image src="{{verify}}" style="width:100%;height:38px;" catchtap="changeVerify"></image>
+                  </view>                 
+              </view>  
+              <view class="tc-clearfix"></view>            
+          </view>
+
+          <button class="weui-btn tc-btn-success" formType="submit">下一步</button>
+      </form>   
+
+      <view class="bottom-text">
+          <navigator url="login" open-type="redirect">
+              <text class="tc-pull-left tc-text-primary">返回登陆</text>
+          </navigator>         
+      </view>  
+
+    </view>
+  </view>
+
+</view>
+
+<view class="bottom-wrap">
+  <view class="slogan">
+    <text>用心服务</text>
+    <image style="" class="heart" src="../../../image/icon-heart.png"></image> 
+    <text>爱+共赢</text>
+  </view>
+  <view class="record">
+    <text>粤ICP备16034950号-1</text>
+  </view>
+</view>

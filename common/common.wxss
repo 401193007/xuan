@@ -1,0 +1,32 @@
+.tc-group {
+    margin : 15px;
+}
+.tc-pull-left {
+    float: left;
+}
+.tc-pull-right {
+    float: right;
+}
+.tc-btn-primary {
+    color : #fff !important;
+    background-color:#4891d1 !important;
+}
+.tc-btn-orange {
+    color : #fff !important;
+    background-color:#ec971f !important;
+}
+.tc-text-default {
+    color :#999;
+}
+.tc-text-primary {
+    color : #4891d1;
+}
+.tc-text-success {
+    color : #5dc756;
+}
+.cell-icon {
+    margin-right: 5px;
+    vertical-align: middle;
+    width:20px;
+    height: 20px;    
+}

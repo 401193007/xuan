@@ -1,0 +1,102 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label"><text class="tc-text-primary">{{result.name}}</text></view>
+                    <!--<view class="weui-form-preview__value_in-hd">¥2400.00</view>-->
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">项目负责人</view>
+                    <view class="weui-form-preview__value">{{result.leading}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">提交时间</view>
+                    <view class="weui-form-preview__value">{{result.add_time}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">审核状态</view>
+                    <block wx:if="{{result.status == 0}}"><view class="weui-form-preview__value tc-text-danger">{{result.statusCN}}</view></block>
+                    <block wx:if="{{result.status == 1}}"><view class="weui-form-preview__value tc-text-primary">{{result.statusCN}}</view></block>
+                    <block wx:if="{{result.status == 2}}"><view class="weui-form-preview__value tc-text-success">{{result.statusCN}}</view></block>
+
+                </view>
+            </view>
+
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">统一社会信用代码</view>
+                    <view class="weui-form-preview__value">{{result.uscc}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">项目负责人</view>
+                    <view class="weui-form-preview__value">{{result.leading}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">联系电话</view>
+                    <view class="weui-form-preview__value">{{result.mobile}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">联系邮箱</view>
+                    <view class="weui-form-preview__value">{{result.email}}</view>
+                </view>                
+            </view>
+
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">目前企业纳税情况（每月）</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">增值税</view>
+                    <view class="weui-form-preview__value">{{result.added_tat}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">企业税</view>
+                    <view class="weui-form-preview__value">{{result.income_tax}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">总计</view>
+                    <view class="weui-form-preview__value">{{result.total}}</view>
+                </view>                
+            </view> 
+
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">意向在天津缴纳税额（每月）</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">增值税</view>
+                    <view class="weui-form-preview__value">{{result.will_added_tat}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">企业税</view>
+                    <view class="weui-form-preview__value">{{result.will_income_tax}}</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">总计</view>
+                    <view class="weui-form-preview__value">{{result.will_total}}</view>
+                </view>                
+            </view>    
+
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">营业执照</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <image src="{{result.bl_link}}" style="width:100%;"/>
+                </view>              
+            </view>                        
+
+
+            <view class="weui-form-preview__hd">
+                <view class="weui-msg__opr-area">
+                    <button class="weui-btn tc-btn-primary" type="primary" bindtap="return">返回</button>
+                </view>
+            </view>
+
+        </view>
+
+    </view>
+</view>

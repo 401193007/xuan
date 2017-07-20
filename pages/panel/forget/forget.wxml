@@ -1,0 +1,29 @@
+<view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>  
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="weui-cells__title">手机号码</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入手机号码" name="mobile" maxlength="11" bindchange="input_mobile" type="number"/>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">验证码</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input weui-cell_vcode">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入验证码" name="smsCode"  type="number"/>
+                </view>
+                <view class="weui-cell__ft">
+                   <button class="weui-vcode-btn" bindtap="countdown" disabled="{{code.disabled}}">{{code.name}}</button>
+                </view>                
+            </view>
+        </view> 
+
+        <view class="tc-group">
+            <button class="weui-btn tc-btn-primary" formType="submit">下一步</button>
+        </view>
+    </form>   
+</view>

@@ -1,0 +1,36 @@
+<view class="page__bd">
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>  
+    <form bindsubmit="formSubmit" bindreset="formReset">
+        <view class="weui-cells__title">手机号码</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入手机号码" name="mobile" maxlength="11" type="number"/>
+                </view>
+            </view>
+        </view>
+
+        <view class="weui-cells__title">密码</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入密码" name="password" password/>
+                </view>
+            </view>
+        </view>
+
+        <view class="tc-group">
+            <button class="weui-btn tc-btn-primary" formType="submit">登录</button>
+        </view>
+    </form>   
+
+    <view class="bottom-text">
+        <navigator url="../register/register">
+            <text class="tc-pull-left tc-text-primary">注册</text>
+        </navigator>    
+        <navigator url="../forget/forget">
+            <text class="tc-pull-right tc-text-default">忘记密码？</text>
+        </navigator>         
+    </view>  
+
+</view>

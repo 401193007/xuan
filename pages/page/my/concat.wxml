@@ -1,0 +1,17 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-cells__title">联系方式</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">电话</view>
+                <view class="weui-cell__ft">020-87308223</view>
+            </view>
+        </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">地址</view>
+                <view class="weui-cell__ft" style="width:80%;">广东省广州市越秀区环市东路498号柏丽商业中心12楼C房</view>
+            </view>
+        </view>                   
+    </view>
+</view>

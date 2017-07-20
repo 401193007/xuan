@@ -1,0 +1,457 @@
+/*.page__bd {
+  line-height:0;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+}*/
+.back_img{  
+  background-size:cover;  
+  z-index:0;  
+  position:relative;  
+  width: 100%;
+  height: 100%;
+}  
+.bottom-wrap {
+  width: 100%;
+  position: absolute;
+  bottom : 10px;
+  text-align: center;
+  z-index: 90;
+}
+.bottom-wrap.gray .slogan {
+  color : #999;
+}
+.slogan {
+  font-size:14px;
+  color :#e93355;
+  line-height: 44px;
+}
+.record {
+  font-size: 12px;
+}
+.heart {
+  width:24px;
+  height:20px;
+  margin: 0 5px;
+  vertical-align : middle;
+  z-index: 99;
+}
+
+.common-panel {
+  font-size: 12px;
+  width: 90%;
+  position: absolute;
+  box-shadow : 0 5px 5px rgba(0,0,0,0.25);
+  border-radius : 10px;
+  overflow: hidden;
+  z-index: 10;
+  top:10%;
+  left : 50%;
+  margin-left: -45%;
+}
+.common-panel-lt {
+  background-color : #f3f3f3;
+  line-height: 44px;
+  padding-left: 10px;
+}
+.common-panel-lt .logo {
+  width: 30px;
+  height: 24px;
+  margin-top: 10px;
+  margin-right: 10px;  
+}
+.tabs-panel {
+  background-color: #fff;
+  padding: 20px 10px;
+}
+.tabs-panel .weui-btn {
+  font-size: 14px;
+  line-height: 44px;
+}
+.tabs-panel .name {
+  font-size: 15px;
+}
+.icon-user {
+  width:24px;
+  height:24px;
+  vertical-align:middle;
+  margin-right:10px;
+  margin-top:-5px;
+  margin-left: -15px;
+}
+.icon-up {
+  width: 10px;
+  height: 5px;
+  vertical-align:middle;
+  margin-top:-5px;
+  margin-left: 5px;  
+}
+.icon-up.down {
+  transform: rotate(180deg);
+}
+.name.panel-top {
+  text-align: center;
+  line-height: 1;
+  display: block;
+  font-size: 15px;
+  border-bottom: 1px solid #f2f2f2;
+  padding-bottom: 15px;
+  font-weight: 700;
+}
+
+.common-panel-rb .weui-cells__title {
+  margin-top: 15px;
+  font-size: 13px;
+  font-weight: 700;
+  color :#333;
+}
+.common-panel-rb .weui-cells::after,.common-panel-rb .weui-cells::before {
+  border:none;
+}
+.common-panel-rb .weui-cell_input {
+  box-sizing: border-box;
+  border:1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: rgb(250, 255, 189);
+}
+.common-panel-rb .weui-cell_input.code,.common-panel-rb .code-img{
+  width: 50%;
+  float: left;
+  height: 38px;
+  box-sizing: border-box;
+}
+.common-panel-rb .code-img{
+  
+}
+.common-panel-rb .bottom-text {
+  margin: 10px 0 20px;
+}
+
+
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #595757;
+}
+.navbar-header {
+  height: 100%;
+  padding: 0 15px;
+}
+.nav-toggle {
+  position : relative;
+  margin-top:8px;
+  padding: 9px 5px;
+}
+.nav-toggle .icon-bar {
+  background-color : #fff;
+  width : 22px;
+  height : 2px;
+  border-radius : 1px;
+}
+.nav-toggle .icon-bar:not(:first-child) {
+  margin-top: 4px;
+}
+.navbar-default {
+  position: relative;
+  width: 100%;
+  z-index: 5;
+}
+
+.sidebar-nav {
+  opacity: 0;
+  transition: .3s;
+  transform: translateY(-50%);
+  height: 0;
+  overflow: hidden;
+  box-shadow: 0 3px 3px rgba(0,0,0,.25);
+}
+.sidebar-nav.show {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 10;
+  height: auto;
+}
+.nav {
+  background-color : #eee;
+  position : relative;
+  display : block;
+  padding : 10px 15px;
+  font-size: 12px;
+  border-bottom:1px solid #f8f8f8;
+}
+.nav.active {
+  background-color: #c8c8c8;
+}
+.nav.active text {
+  color :#333;
+  font-weight: 700;
+}
+.nav.active .icon-arrow {
+  display: none;
+}
+.nav text {
+  color :#337ab7;
+}
+.nav .icon-arrow {
+  width: 5px;
+  height: 6px;
+  position: absolute;
+  right: 15px;
+  top:50%;
+  margin-top:-3px;
+}
+.nav-second-level {
+  position: relative;
+}
+.nav-second-level .nav{
+  background-color: #f2f2f2;
+  border-bottom:none;
+}
+
+.dropdown-toggle {
+  height: 100%;
+  line-height: 44px;
+  font-size:12px;
+  color :#fff;
+}
+.dropdown-toggle text {
+  margin-right: 10px;
+  line-height: 50px;
+}
+.dropdown-toggle .icon-user {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin:0;
+}
+.dropdown-menu {
+  font-size: 12px;
+  background-color: #fff;
+  position: absolute;
+  top:0;
+  right: 15px;
+  display: none;
+  box-shadow: 0 0 2px rgba(0,0,0,.15);
+}
+.dropdown-menu.show {
+  display: block;
+}
+.dropdown-menu .menu {
+  padding: 15px 20px;
+}
+.dropdown-menu .menu:not(:last-child){
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.page-wrap {
+  padding: 0 15px;
+  font-size : 14px;
+}
+.page-head {
+  margin: 0 -15px;
+  font-size : 12px;
+  background-color : #82d4ff;
+  color : #fff;
+  line-height : 36px;
+  padding: 0 15px;
+}
+.alert-wrap {
+  padding: 15px;
+  background-color: #ededed;
+  margin: 20px 0;
+  border-radius: 5px;
+  color : #333;
+}
+.alert-wrap .alert-text {
+  text-decoration: underline;
+  color : #23527c;
+}
+.page-container {
+  background-color: #fff;
+  padding: 15px;
+  margin: 0 -15px;
+}
+.page-container .title {
+  padding : 15px 0;
+  font-size:16px;
+}
+.page-section {
+  margin-bottom: 20px;
+}
+.page-section .page-section-title {
+
+}
+.page-section .weui-cells__title {
+  margin-top: 0;
+  color :#333;
+  font-weight: 700;
+}
+.page-section .weui-cells {
+  border-radius :5px;
+  border:1px solid #ccc;
+}
+.page-section .weui-cells .disabled {
+  background-color: #eee;
+}
+.page-section .weui-cells:after,.page-section .weui-cells:before {
+  border:0;
+}
+.page-section .weui-cell_input {
+  font-size: 14px;
+}
+.page-section-body {
+  margin-top: 5px;
+  background-color: #fafafa;
+  padding: 15px;
+}
+.page-section-body .tc-group {
+  margin : 0 0 15px;
+}
+.page-section-body .tc-group:last-child {
+  margin-bottom: 0;
+}
+.page-section-body .subtitle {
+  font-size: 16px;
+  line-height: 44px;
+  margin-left: 15px;
+  font-weight: 700;
+}
+.page-section-body.group-wrap:not(:first-child) {
+  margin-top: 20px;
+}
+.page-section-body .group-add {
+  border-top:1px solid #ddd;
+  margin: 0 -15px;
+  padding-top:15px;
+  font-size: 16px;
+}
+.page-section-body .group-add text {
+  display: block;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/*公共动画*/
+.dropdown-ani {
+  opacity: 0;
+  transition: .3s;
+  transform: translateY(-50%);
+  height: 0;
+  overflow: hidden;
+}
+.dropdown-ani.show {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 10;
+  height: auto;
+}
+
+/*模拟弹窗*/
+.modal {
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  background-color : rgba(0,0,0,.5);
+  z-index: 100;
+  display: none;
+}
+.modal.show {
+  display: block;
+}
+.modal-content {
+  background-color: #fff;
+  margin: 15px;
+  border-radius : 5px;
+  font: 14px;
+}
+.modal-content .modal-header,.modal-content .modal-body,.modal-content .modal-footer {
+  padding: 15px;
+}
+.modal-content .modal-header,.modal-content .modal-body {
+  border-bottom : 1px solid #e6e6e6;
+}
+.modal-content .modal-body {
+  overflow-y: scroll;
+  height : 250px;
+  -webkit-overflow-scrolling : touch;
+}
+.modal-body .row {
+  margin-bottom: 10px;
+  font-size:12px;
+}
+.modal-content .modal-footer {
+  font-size: 12px;
+}
+.tc-input-group {
+  position : relative;
+  display: table;
+  border-collapse : separate;
+  width : 100%;
+}
+.tc-input-group .form-control {
+  box-sizing: border-box;
+  display : table-cell;
+  position : relative;
+  z-index: 2;
+  float : left;
+  width : 100%;
+  margin-bottom : 0;
+  height : 46px;
+  padding : 6px 12px;
+  font-size : 14px;
+  background-color : #fff;
+  border-radius :5px 0 0 5px;
+  line-height : 1.42857143;
+  border:1px solid #ccc;
+}
+.tc-input-group .tc-input-group-btn {
+  display : table-cell;
+  position : relative;
+  width: 50px;
+  vertical-align: middle;
+}
+.tc-input-group .tc-input-group-btn .weui-btn {
+  margin-top: 0;
+  height: 46px;
+  border-radius: 0 5px 5px 0;
+}
+.tc-input-group .tc-input-group-btn .weui-btn  image{
+  width: 0;
+  height: 0;
+}
+.file-preview {
+  border-radius : 5px;
+  border : 1px solid #ddd;
+  padding : 10px;
+  width :　100%;
+  margin-bottom : 5px;
+  overflow : hidden;
+}
+.file-preview-frame {
+  display : block;
+  border :　1px solid #ddd;
+  box-shadow : 1px 1px 5px 0 #a2958a;
+  padding : 6px;
+  float :left;
+  text-align : center;
+  width : 100%;
+  box-sizing: border-box;
+}
+.file-preview-frame image {
+  width: 100%;
+}
+.file-preview-frame .icon-wrap {
+  width: 25px;
+  height: 25px;
+  padding : 5px;
+  line-height: 30px;
+  margin-top: 5px;
+}
+.file-preview-frame .icon-wrap.delete {
+  background-color: #fff;
+  border-radius: 3px;
+}

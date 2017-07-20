@@ -1,0 +1,58 @@
+<import src="common/common" />
+<template is="commonBg" data="{{windowHeight : windowHeight,windowWidth : windowWidth}}"/>
+
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>  
+
+<view class="common-panel">
+  <template is="commonTop"/>
+  <view class="common-panel-rb">
+    <view class="tabs-panel">
+      <text class="name panel-top">登录</text>
+
+      <form bindsubmit="formSubmit" bindreset="formReset">
+          
+          <view class="weui-cells__title">身份证号码</view>
+          <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__bd">
+                      <input class="weui-input" placeholder="请输入身份证号码" name="id_number" value="{{STAFF_IDNUMBER}}"/>
+                  </view>
+              </view>
+          </view>
+
+          <view class="weui-cells__title">密码</view>
+          <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__bd">
+                      <input class="weui-input" placeholder="请输入密码" name="password" type="password" value="{{STAFF_PASSWORD}}"/>
+                  </view>
+              </view>
+          </view>
+
+          <button class="weui-btn tc-btn-success" formType="submit">登录</button>
+      </form>   
+
+      <view class="bottom-text">
+          <navigator url="forget" open-type="redirect">
+              <text class="tc-pull-left tc-text-primary">首次登录</text>
+          </navigator>    
+          <navigator url="forget" open-type="redirect">
+              <text class="tc-pull-right tc-text-default">忘记密码？</text>
+          </navigator>         
+      </view>  
+
+    </view>
+  </view>
+
+</view>
+
+<view class="bottom-wrap">
+  <view class="slogan">
+    <text>用心服务</text>
+    <image style="" class="heart" src="../../../image/icon-heart.png"></image> 
+    <text>爱+共赢</text>
+  </view>
+  <view class="record">
+    <text>粤ICP备16034950号-1</text>
+  </view>
+</view>

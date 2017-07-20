@@ -1,0 +1,69 @@
+  <include src="../top/top"/>
+
+  <view class="page-wrap">
+    <view class="page-head">
+      <text>社保相关</text> > <text>医疗报备列表</text>
+    </view>   
+
+    <view class="page-container">
+      <view class="title">医疗报备列表</view> 
+
+      <navigator url="medical_reimbursement_form" open-type="redirect" hover-class="none">
+        <button class="weui-btn mini-btn tc-btn-primary" size="mini">申请报销</button>
+      </navigator>
+      
+
+      <view class="table">
+        <view class="tr bg-w">
+          <view class="th">id</view>
+          <view class="th">疾病名称</view>
+          <view class="th ">诊断日期</view>
+          <view class="th ">是否住院</view>
+          <view class="th ">进度</view>
+        </view>
+
+        <view class="tr" wx:for="{{content_list}}">
+            <view class="td">{{item.id}}</view>
+            <view class="td">{{item.illness}}</view>
+            <view class="td">{{item.diagnose_date}}</view>
+            <view class="td">{{item.hospitalization_text}}</view>
+            <view class="td">{{item.progress_text}}</view>        
+        </view>
+
+
+        <!--<view class="tr">
+          <view class="td">1</view>
+          <view class="td">2</view>
+          <view class="td">3</view>
+          <view class="td">4</view>
+          <view class="td">5</view>
+        </view>
+        <view class="tr">
+          <view class="td">1</view>
+          <view class="td">2</view>
+          <view class="td">3</view>
+          <view class="td">4</view>
+          <view class="td">5</view>
+        </view>
+
+        <view class="tr">
+          <view class="td">1</view>
+          <view class="td">2</view>
+          <view class="td">3</view>
+          <view class="td">4</view>
+          <view class="td">5</view>
+        </view>
+        <view class="tr">
+          <view class="td">1</view>
+          <view class="td">2</view>
+          <view class="td">3</view>
+          <view class="td">4</view>
+          <view class="td">5</view>
+        </view>        -->
+
+      </view>
+    </view>
+    
+  </view>
+
+

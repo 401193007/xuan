@@ -1,0 +1,78 @@
+<import src="../../../../common/wxParse/wxParse.wxml"/>
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>  
+<view class="container">
+    <view class="tc-page-head">
+        <text>入职申请</text>
+    </view>
+    <view class="tc-m-auto">
+        <view class="tc-panel-wrap">
+            <view class="panel-heading">
+                <icon type="info" size="12" color="black"/>
+                <text>劳动合同</text>
+            </view>
+            <view class="hetong" bindtap="dropdownToggle">劳动合同文档查看</view>
+
+            <!--<block wx:if="{{route=='step_1'}}">-->
+            <view class="dropdown {{dropdownShow? 'show' : ''}}">
+                <view class="wxParse" style="margin:15px;">
+                    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+                </view>            
+            
+            </view>
+
+            <!--</block>-->
+
+
+            <view class="panel-body">
+                <view class="ziliao">资料确认</view>
+                <form bindsubmit="formSubmit" bindreset="formReset">
+                    <view class="form-group">
+                        <view class="label">手机验证<text>{{mobile}}</text></view>
+                        <view class="tc-g">
+                            <input class="form-control" placeholder="请输入手机验证码" name="validate" type="number"/>
+                            <button class="tc-code" bindtap="countdown" disabled="{{code.disabled}}">{{code.name}}</button>
+                        </view>
+                    </view>
+                    <view class="form-group">
+                        <view class="label">验证码</view>
+                        <view class="tc-g">
+                            <input class="form-control" placeholder="请输入图片验证码" name="captcha" type="number"/>
+                            <view class="tc-imgcode">
+                              <image src="{{verify}}" class="verify" catchtap="changeVerify"></image>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="form-group">
+                        <view class="label">签名</view>
+                        <view class="tc-info">请在下面白色区域内签名</view>
+                        <view class="tc-g">
+                          <view class="canvas-container">
+                              <canvas canvas-id="myCanvas" class="myCanvas"
+                                  disable-scroll="false"
+                                  bindtouchstart="touchStart"
+                                  bindtouchmove="touchMove"
+                                  bindtouchend="touchEnd">
+                              </canvas>
+                          </view>
+                        </view>            
+
+                        <!--<text>图片查看</text>
+                        <view class="img-wrap">
+                          <image src="{{path}}"></image>
+                        </view>                        -->
+
+
+
+                        <view class="tc-g" style="margin-top:10px;">
+                          <button class="tc-btn-success" size="mini" catchtap="save">保存签名</button>
+                          <button class="tc-text-danger"  size="mini" catchtap="reset">重置画布</button>
+                        </view>
+                    </view>
+                    <view class="tc-submit-wrap">
+                        <button class="tc-sub tc-btn-primary" formType="submit">提交</button>
+                    </view>
+                </form>
+            </view>
+        </view>
+    </view>
+</view>

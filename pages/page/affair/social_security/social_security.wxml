@@ -1,0 +1,35 @@
+  <include src="../top/top"/>
+
+  <view class="page-wrap">
+    <view class="page-head">
+      <text>社保相关</text> > <text>社保卡申办记录</text>
+    </view>   
+
+    <view class="page-container">
+      <view class="title">社保卡申办记录</view> 
+
+      <navigator url="social_security_form" open-type="redirect" hover-class="none">
+        <button class="weui-btn mini-btn tc-btn-primary" size="mini">申办社保卡</button>
+      </navigator>
+      
+
+      <view class="table">
+        <view class="tr bg-w">
+          <view class="th">id</view>
+          <view class="th">申请日期</view>
+          <view class="th ">进度</view>
+        </view>
+
+        <view class="tr" wx:for="{{content_list}}">
+            <view class="td">{{item.id}}</view>
+            <view class="td">{{item.create_time}}</view>
+            <view class="td">{{item.progress_text}}</view>        
+        </view>
+ 
+
+      </view>
+    </view>
+    
+  </view>
+
+

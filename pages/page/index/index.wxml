@@ -1,0 +1,73 @@
+<!--index.wxml-->
+<view>
+  <swiper circular="{{circular}}" class="swiper-container">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <image src="../../../image/banner.png" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="page" style="position:relative">
+    <!--<view class="page__hd">
+        <view class="page__desc">功能列表</view>
+    </view>-->
+    <view class="page__bd">
+        <view class="nav-list">
+
+          <navigator class="nav-item" url="company_introduction" id="affair" style="width:92%;margin-bottom:0;">
+            <image src="../../../image/icon-company.png" class="icon"></image>
+            <view class="text-wrap">
+              <text class="title">公司简介</text>
+              <text class="desc">广东萱玥文销售服务有限公司</text>
+            </view>
+          </navigator>  
+
+          <!--<view class="nav-item tc-pull-left" data-src="../investment/investment" catchtap="goInvestment" id="investment">
+            <image src="../../../image/index.png" class="icon"></image>
+            <view class="text-wrap">
+              <text class="title">招商</text>
+              <text class="desc">文字描述文字描述</text>
+            </view>
+          </view>      -->
+                                      
+        </view>
+
+        <view class="nav-list tc-clearfix">
+
+          <view class="nav-item tc-pull-left" data-src="../affair/choose" catchtap="goAffair" id="affair">
+            <image src="../../../image/icon-renshi.png" class="icon"></image>
+            <view class="text-wrap">
+              <text class="title">人事</text>
+              <text class="desc">公司人事事务管理系统</text>
+            </view>
+          </view>  
+
+          <view class="nav-item tc-pull-left" data-src="../investment/investment" catchtap="goInvestment" id="investment">
+            <image src="../../../image/icon-touzi.png" class="icon"></image>
+            <view class="text-wrap">
+              <text class="title">招商</text>
+              <text class="desc">天津产业园招商引资</text>
+            </view>
+          </view>  
+
+          <view class="nav-item tc-pull-left" style="background-color:#e6e6e6">
+            <image src="../../../image/icon-caiwu.png" class="icon"></image>
+            <view class="text-wrap">
+              <text class="title" style="color:#999">财务</text>
+              <text class="desc">敬请期待</text>
+            </view>
+          </view>  
+
+          <view class="nav-item tc-pull-left" style="background-color:#e6e6e6">
+            <image src="../../../image/icon-falv.png" class="icon"></image>
+            <view class="text-wrap">
+              <text class="title" style="color:#999">法律咨询</text>
+              <text class="desc">敬请期待</text>
+            </view>
+          </view>                
+                                      
+        </view>
+    </view>
+</view>

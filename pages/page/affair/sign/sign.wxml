@@ -1,0 +1,34 @@
+  <include src="../top/top"/>
+
+
+  <view class="page-wrap">
+    <view class="page-head">
+      <text>考勤管理</text> > <text>每日签到</text>
+    </view>   
+
+    <view class="page-container">
+      <view class="title">每日签到</view> 
+
+      <button class="weui-btn mini-btn tc-btn-primary" size="mini" catchtap="sign" style="margin-top:0;">每日签到</button>
+      
+
+      <view class="table">
+        <view class="tr bg-w">
+          <view class="th">签到日期</view>
+          <view class="th">签到时间</view>
+        </view>
+
+        <block  wx:for="{{content_list}}">
+          <view class="tr">
+              <view class="td">{{item.date}}</view>
+              <view class="td">{{item.time}}</view>     
+          </view>    
+          <view class="address">{{item.address}}</view>
+        </block>
+
+      </view>
+    </view>
+    
+  </view>
+
+

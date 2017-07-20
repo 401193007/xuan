@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view>
+  <swiper circular="{{circular}}" class="swiper-container">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <image src="../../../image/investment.png" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="page" style="position:relative">
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-flex">
+            <navigator hover-class="none" class="weui-flex__item btn" url="introduce/introduce">
+              <view class="weui-flex placeholder grid">
+                  <view class="weui-flex__item text-wrap">
+                    <text class="title">天津武清区汽车产业园招商引资宣传</text>
+                    <text class="subtitle">产业扶持  财政补贴  保姆式服务</text>
+                  </view>
+              </view>
+            </navigator>       
+        </view> 
+        <view class="weui-flex">
+            <navigator hover-class="none" class="weui-flex__item btn" url="step/step">
+              <view class="weui-flex placeholder grid">
+                  <view class="weui-flex__item text-wrap">
+                    <text class="title">申请招商引资</text>
+                    <text class="subtitle">填写相关资料申请招商引资</text>
+                  </view>
+              </view>
+            </navigator>       
+        </view>     
+        <view class="weui-flex">
+            <navigator hover-class="none" class="weui-flex__item btn"  url="investment_list">
+              <view class="weui-flex placeholder grid">
+                  <view class="weui-flex__item text-wrap">
+                    <text class="title">申请信息</text>
+                    <text class="subtitle">查看招商引资详情</text>
+                  </view>
+              </view>
+            </navigator>       
+        </view>                      
+    </view>
+</view>
+

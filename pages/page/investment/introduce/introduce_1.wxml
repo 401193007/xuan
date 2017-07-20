@@ -1,0 +1,24 @@
+<view class="page" style="background-color:#fff;">
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">我们在武清</view>
+            <view class="weui-article__section">
+                
+                <view class="weui-article__title tc-text-primary">京津卫星城   美丽新武清</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                        <image class="weui-article__img" src="../../../../image/1.jpg" mode="aspectFit" style="width:100%;" />
+                    </view>
+                    <view class="weui-article__p">
+                        武清为天津市辖区，面积1574平方公里，常住人口118万，户籍人口90万。建制于西汉，古称为泉州，别称“雍阳”，是天津地区见于文献记载的最早建制县，至今已2100多年历史。唐天宝元年（724年）更名为武清，2000年撤县建区，位于京、津两大直辖市的中心点，素有“京津走廊”、“京津明珠”美誉，是京津冀三省市的交汇点、国家“京津冀协同发展”战略的重要核心区和桥头堡、国家智慧城市试点之一。
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                        武清为天津市辖区，面积1574平方公里，常住人口118万，户籍人口90万。建制于西汉，古称为泉州，别称“雍阳”，是天津地区见于文献记载的最早建制县，至今已2100多年历史。唐天宝元年（724年）更名为武清，2000年撤县建区，位于京、津两大直辖市的中心点，素有“京津走廊”、“京津明珠”美誉，是京津冀三省市的交汇点、国家“京津冀协同发展”战略的重要核心区和桥头堡、国家智慧城市试点之一。
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

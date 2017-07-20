@@ -1,0 +1,12 @@
+<template name="commonBg">
+  <view class="page__bd" style="height: {{windowHeight}}px; width: {{windowWidth}}px;padding-bottom:0;">  
+    <image style="" class="back_img" src="../../../image/index_bg.jpg"></image>  
+  </view>
+</template>
+
+<template name="commonTop">
+  <view class="common-panel-lt">
+    <image src="../../../image/logo.png" class="logo"></image>
+    <text>广东萱玥文销售有限公司</text>
+  </view>
+</template>

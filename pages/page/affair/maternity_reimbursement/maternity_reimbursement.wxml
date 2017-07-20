@@ -1,0 +1,37 @@
+  <include src="../top/top"/>
+
+  <view class="page-wrap">
+    <view class="page-head">
+      <text>社保相关</text> > <text>生育报备列表</text>
+    </view>   
+
+    <view class="page-container">
+      <view class="title">生育报备列表</view> 
+
+      <navigator url="maternity_reimbursement_form" open-type="redirect" hover-class="none">
+        <button class="weui-btn mini-btn tc-btn-primary" size="mini">添加申请</button>
+      </navigator>
+      
+
+      <view class="table">
+        <view class="tr bg-w">
+          <view class="th">id</view>
+          <view class="th">怀孕周数</view>
+          <view class="th ">预产期</view>
+          <view class="th ">进度</view>
+        </view>
+
+        <view class="tr" wx:for="{{content_list}}">
+            <view class="td">{{item.id}}</view>
+            <view class="td">{{item.pregnancy_weeks}}周</view>
+            <view class="td">{{item.due_date}}</view>
+            <view class="td">{{item.progress_text}}</view>        
+        </view>
+  
+
+      </view>
+    </view>
+    
+  </view>
+
+

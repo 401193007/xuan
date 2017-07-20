@@ -1,0 +1,72 @@
+<import src="common/common" />
+<template is="commonBg" data="{{windowHeight : windowHeight,windowWidth : windowWidth}}"/>
+
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>  
+
+<view class="common-panel">
+
+  <template is="commonTop"/>
+
+  <view class="common-panel-rb">
+    <view class="tabs-panel">
+      <text class="name panel-top">找回密码第二步</text>
+
+      <form bindsubmit="formSubmit" bindreset="formReset">
+          
+          <view class="weui-cells__title">身份证号码</view>
+          <view class="weui-cells weui-cells_after-title ">
+              <view class="weui-cell weui-cell_input disabled">
+                  <view class="weui-cell__bd">
+                      <input class="weui-input" value="{{id_number}}" name="id_number" disabled/>
+                  </view>
+              </view>
+          </view>
+
+          <view class="weui-cells__title">手机号码</view>
+          <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_input code disabled">
+                  <view class="weui-cell__bd">
+                      <input class="weui-input" value="{{mobile}}" name="mobile" disabled/>
+                  </view>                 
+              </view>
+              <view class="code-img">
+                  <button style="background-color:#ec971f;height:100%;width:90%;margin-left:10%;border-radius:5px;line-height:38px;font-size:12px;;float:right;text-align:center;color:#fff;border:1px solid #ec971f;" catchtap="countdown" disabled="{{code.disabled}}">
+                    {{code.name}}
+                  </button>                 
+              </view>  
+              <view class="tc-clearfix"></view>            
+          </view>
+
+          <view class="weui-cells__title">短信验证码</view>
+          <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__bd">
+                      <input class="weui-input" placeholder="请输入手机验证码" name="validate"/>
+                  </view>
+              </view>
+          </view>
+
+          <button class="weui-btn tc-btn-success" formType="submit">下一步</button>
+      </form>   
+
+      <view class="bottom-text">
+          <navigator url="login" open-type="redirect">
+              <text class="tc-pull-left tc-text-primary">返回登陆</text>
+          </navigator>         
+      </view>  
+
+    </view>
+  </view>
+
+</view>
+
+<view class="bottom-wrap">
+  <view class="slogan">
+    <text>用心服务</text>
+    <image class="heart" src="../../../../image/icon-heart.png"></image> 
+    <text>爱+共赢</text>
+  </view>
+  <view class="record">
+    <text>粤ICP备16034950号-1</text>
+  </view>
+</view>

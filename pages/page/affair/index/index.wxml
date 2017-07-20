@@ -1,0 +1,515 @@
+
+  <include src="../top/top"/>
+
+  <view class="page-wrap">
+    <view class="page-head">
+      <text>首页</text> > <text>员工控制台</text>
+    </view>  
+
+    <view class="alert-wrap">
+      <text>你可以点击此处 </text> <text class="alert-text" catchtap="downloadPDF">下载劳动合同</text>
+    </view>
+
+    <view class="alert-wrap">
+      <text>新员工请务必仔细阅读 </text> <text class="alert-text" catchtap="showModal">《员工入职须知》</text> 里的各项相关规定
+    </view>    
+  </view>
+
+  <view class="bottom-wrap gray">
+    <view class="slogan">
+      <text>用心服务</text>
+      <image class="heart" src="../../../../image/icon-heart-grey.png"></image> 
+      <text>爱+共赢</text>
+    </view>
+  </view>  
+
+  <view class="modal {{showModal? 'show' : ''}}" wx:if="{{isRead}}">
+    <view class="modal-dialog">
+      <view class="modal-content">
+        <view class="modal-header">
+          <text>《促销员入职须知》</text>
+        </view>
+        <view class="modal-body">
+
+            <view style="text-align:center;" class="row">促销员入职须知</view>
+            <view class="row"></view>
+            <view class="row" style="text-align:left;"> 
+              <text>尊敬的</text>
+              <text style="text-decoration: underline">  {{staffName}}  </text>
+              <text>先生</text>/<text>小姐</text>
+            </view>
+            <view class="row">
+              <text style="margin-left:24px;"></text>
+              <text>首先，欢迎您加入本公司，您的入职时间为</text>
+              <text style="text-decoration: underline">   {{entry_date}}   </text>
+              <text>，属于广东萱玥文销售服务有限公司派往指定工作区域的促销人员。为了能让您有一个更好的工作环境，使我们的合作轻松愉快，请您仔细阅读本公司有关规定。</text>
+            </view>
+            <view class="row">
+              <text style="font-weight:700;">一、人事管理</text>
+            </view>
+            <view class="row" style="text-indent:4.5pt;">
+              <text>1.入职</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>1.1 </text>
+              <text>员工入职需提交以下资料：身份证明复印件（正反面复印在同一张A4纸上）、银行卡复印件（需在复印件上手抄卡号并签名）</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>1.2 </text>
+              <text>员工报到时，须亲笔如实填报有关资料，并保证向公司提供的个人资料真实无误，若一经发现属虚报或伪造，公司有权立即将其作违纪辞退处理，无须支付任何经济补偿；                </text>
+            </view>
+
+            <view class="row" style="text-indent:4.5pt;">
+              <text>2.试用期</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.1 </text>
+              <text>试用期期限为3-6个月，试用期的工资、福利、假期等具体事项均按国家规定和公司制度执行；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.3 </text>
+              <text>试用期满个月，公司将对新员工进行阶段性考核，考核合格予以转正；考核不合格，则继续试用或中止试用；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.4 </text>
+              <text>如果员工在6个月的试用期结束后表现仍未通过评估，公司根据具体情况，与员工做调岗处理或解除劳动关系；</text>
+            </view>
+
+            <view class="row" style="text-indent:4.5pt;">
+              <text>3 薪酬</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.1 </text>
+              <text>考核与调整：员工连续2个月业绩或工作表现评估不合格的，公司将对员工进行培训，培训后仍未能符合岗位要求的，公司将根据相关规定调整员工工作岗位，薪酬执行调整               后岗位标准；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.2 </text>
+              <text>发放：员工当月的工资于次月25-27日发放，如遇休息日或节假日顺延发放；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.3 </text>
+              <text>保密:公司实行保密薪酬原则,严禁员工以任何方式向他人透露自己或探听他人的工资状况；任何泄露或探听他人工资信息者，一经发现，皆以违纪辞退处理，无须支付任何                  经济补偿；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.4 </text>
+              <text>员工应及时核对当月核发的工资，如果对公司支付的工资（包括但不限于加班工资、计算方法、计算依据、发放金额等）有异议，应在工资发放后十日内书面向人力资源部提出，否则视为无异议；如因员工未及时提出异议，逾期提出异议又无法出示证据文件、或者员工主管离职或调离无法核实证据的，公司不承担责任。</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.5 </text>
+              <text>员工对工资支付存在异议应通过正常途径反映，不得在网络社交平台及公众场合传播，一经发现予以开除处理，并视情况给予经济追偿。</text>
+            </view>   
+
+            <view class="row" style="text-indent:4.5pt;">
+              <text>4 培训</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>4.1 </text>
+              <text>上班时间参加培训，可正常发放工资；非正常上班时间参加培训，不再另行申报加班或申请补休；</text>
+            </view> 
+
+            <view class="row" style="text-indent:4.5pt;">
+              <text>5 离职</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>5.1 </text>
+              <text>试用期内员工需提前3个工作日向上级领导提交《离职申请书》，转正后员工须提前30天向上级领导提交《离职申请书》，经审批后，即可按照公司要求办理离职手续；                  </text>
+            </view>   
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>5.1 </text>
+              <text>试用期内员工需提前3个工作日向上级领导提交《离职申请书》，转正后员工须提前30天向上级领导提交《离职申请书》，经审批后，即可按照公司要求办理离职手续；                  </text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>5.2 </text>
+              <text>离职员工完成办理离职手续后，由财务部及人力资源部等相关部门对其进行费用和物料进行审核与结算，在费用结算未完成前，离职当月工资暂不发放；                               </text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>5.3 </text>
+              <text>离职人员费用结算完成后，人力资源部从其工资中扣除相应费用，其余金额在离职手续办清后第1个工资发放日进行发放；                  </text>
+            </view>  
+
+            <view class="row" style="text-indent:4.5pt;">
+              <text>6 其他</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.1员工联系电话、居住地址及婚姻状况发生变化的，必须在一周天内书面通知人力资源部；否则，由此引起的一切后果由员工个人承担；</text>
+            </view>   
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.2保证本人入职时提交信息真实、完整并与应聘时提交的一致，否则，由此引起的一切后果由员工个人承担；                  </text>
+            </view>
+
+            <view class="row">
+              <text style="font-weight:700;">二、社会保险</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>1公司按照国家有关法律、法规参加各项社会保险，社会保险费由企业及员工个人按规定或约定缴纳；员工参加社保保险后应享受的各项待遇按国家有关规定办理；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2 医疗：员工需在住院治疗前，提前1周通知公司、您的上级主管，以便于公司及时办理相关手续；若属急诊，需在入院时4小时内通知；否则，由此引起的一切后果由员工个人承担；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3 生育：参加生育险满1年的员工，需在怀孕2个月内通知公司、您的上级主管及公司人力资源部，以便于公司及时办理相关手续；否则，由此引起的一切后果由员工个人承担；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>4 工伤：员工若发生工伤事故，需在2小时内通知公司、您的上级主管并送往公立定点医院(交通事故同时报警)，以便公司及时办理工伤申报及费用报销手续，因员工个人原因延期上报工伤事故导致超过国家法定工伤事故申报期限的，事故所产生的费用由员工自行承担，公司不承担任何法律责任；</text>
+            </view>
+
+            <view class="row">
+              <text style="font-weight:700;">三、工作时间及假期</text>
+            </view>
+            <view class="row" style="text-indent:4.5pt;">
+              <text>1 工作时间</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>1.1 公司实行六天工作制，每周至少一天休息日。实际休息日由公司配合业务运作需要，必要时调整为长短周或轮值之方式；</text>
+            </view>  
+            <view class="row" style="text-indent:4.5pt;">
+              <text>2 假期  </text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.1 员工按国家法律规定享有法定节假日；</text>
+            </view>   
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.2员工申请事假、病假、婚假、丧假、工伤假、产假等假期必须提前通知公司、上级领导并以书面形式提交申请，若无书面申请视作无效。</text>
+            </view>   
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.3员工未办妥请假手续而擅自离岗或未准假而不到职者，除因临时发生急病或者其他重大事故，经事后证明情况属实且经部门主管批准者外，均视为旷工论处，扣发当天薪资之双倍；</text>
+            </view>   
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.4若员工虚报请假事由，经查证属实者，除其请假日数以旷工论处外，视为自愿解除劳动关系；</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.5 员工请假期满应主动报到上岗，逾期未到岗或未进行请假延期申请视为旷工，逾期3天未到岗视为自动离岗、员工自愿解除劳动合同，公司无需支付补偿金。</text>
+            </view>                    
+            
+             <view class="row">
+              <text style="font-weight:700;">四、考勤</text>
+            </view>
+            <view class="row" style="text-indent:4.5pt;">
+              <text>1 手机上报销量</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>1.1 公司实行手机上报销量制度，员工应按公司要求进行手机激活及上报工作.3天无正当理由不进行手机上报，或者上报信息虚假、明显偏离事实达3次，以及上报天数、销量与实际核算薪资数据差异超过公司规定的范围值的可视为严重违规，经警告后拒不改正的可以予以解除劳动合同。</text>
+            </view>   
+            <view class="row" style="text-indent:4.5pt;">
+              <text>2 迟到</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.1员工未按规定上班时间到驻地工作地点出勤者，视为迟到；</text>
+            </view> 
+             <view class="row" style="text-indent:4.5pt;">
+              <text>3.早退</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.1凡于上班、轮值、活动、集会、培训之出勤时间内，未经批准擅自提前离开者，视为早退；</text>
+            </view> 
+             <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.2当天早退时间不足4小时者，按旷工半天论处；超过4小时（包含）者，按旷工1天论处；</text>
+            </view> 
+             <view class="row" style="text-indent:4.5pt;">
+              <text>4旷工</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>4.1无出勤凭据者一律视为旷工；</text>
+            </view> 
+             <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>4.2 旷工1天，扣发当天薪资并双倍扣罚；连续旷工3天或年累计旷工达6天者，属严重违反公司规章制度，视为自动离职，公司保留按劳动合同条款进一步追偿的权利；                 </text>
+            </view> 
+            <view class="row" style="text-indent:4.5pt;">
+              <text>5 加班：</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>5.1员工在规定工作时间之外延长工作时间完成生产、工作任务谓之加班；</text>
+            </view> 
+             <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>5.2员工加班需在公司要求的情况下方可加班，并事先填写《加班申请表》，经上级领导批准后，方可加班。                 </text>
+            </view> 
+            <view class="row" style="text-indent:4.5pt;">
+              <text>6.行为准则</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.1工作时间内，应保持站立姿势、精神饱满、仪态端庄大方；对顾客热情、友好、第一时间接待顾客；对于不在第一时间接待顾客或者上班状态庸懒者，发现一次，处罚50元；</text>
+            </view> 
+             <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.2服从公司及商场管理人员的工作安排，认真执行公司的各项政策，积极参与公司的各项活动，真实反馈公司需了解的各种信息；对于相关信息反馈不及时或进行虚假信息传递者，视情节轻重予以50-100元的处罚；</text>
+            </view> 
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.3公司销售信息、培训资料均属公司机密，任何时间、地点不得向任何人泄露；对于泄露相关信息者，一经查实，作辞退处理，无须支付任何经济补偿；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.4不得侵占公司及商场的任何物品（含赠品），如因侵占、偷盗公司或商场的物品（含赠品），给公司造成损失的，由本人承担赔偿责任，作辞退处理，无须支付任何经济补偿；情节严重者，将送交公安部门处理；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.5员工在职期间不得兼职其他任何品牌的销售或其他工作，一经查实，不予发放当月工资，并作辞退处理，无须支付任何经济补偿；公司将保留对员工法律追究的权利。</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.6 员工对于公司管理及其他任何方面的问题存在异议的均应遵循合理合法的渠道进行协商和沟通,或者寻求政府机构的帮助,不得在工作场所闹事或其他影响卖场或办事处的正常运营,否则公司有权予以经济追偿及罚款.</text>
+            </view>
+
+            <view style="text-align:center;" class="row">再次欢迎您成为本公司的一员，因为有了您的加入，公司的明天将会更加辉煌！</view>
+
+            <view style="text-align:right;font-weight:700;" class="row">广东萱玥文销售服务有限公司</view>
+
+        </view>
+        <view class="modal-footer">
+
+            <view class="page-section page-section-gap">
+              <checkbox-group bindchange="checkboxChange">
+              <label class="checkbox">
+                <checkbox value="cb" checked="{{isAgree}}" class="box" bindchange="checkboxChange"/>我已阅读清楚并同意以上守则的内容             
+              </label>
+              </checkbox-group>
+            </view>       
+
+            <button class="weui-btn mini-btn" type="default" size="mini" catchtap="closeModal">关闭</button>
+        
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="modal {{showModal2? 'show' : ''}}" wx:else>
+    <view class="modal-dialog">
+      <view class="modal-content">
+        <view class="modal-header">
+          <text>《促销员入职须知》</text>
+        </view>
+        <view class="modal-body">
+
+            <view style="text-align:center;" class="row">促销员入职须知</view>
+            <view class="row"></view>
+            <view class="row" style="text-align:left;"> 
+              <text>尊敬的</text>
+              <text style="text-decoration: underline">  {{staffName}}  </text>
+              <text>先生</text>/<text>小姐</text>
+            </view>
+            <view class="row">
+              <text style="margin-left:24px;"></text>
+              <text>首先，欢迎您加入本公司，您的入职时间为</text>
+              <text style="text-decoration: underline">   {{entry_date}}   </text>
+              <text>，属于广东萱玥文销售服务有限公司派往指定工作区域的促销人员。为了能让您有一个更好的工作环境，使我们的合作轻松愉快，请您仔细阅读本公司有关规定。</text>
+            </view>
+            <view class="row">
+              <text style="font-weight:700;">一、人事管理</text>
+            </view>
+            <view class="row" style="text-indent:4.5pt;">
+              <text>1.入职</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>1.1 </text>
+              <text>员工入职需提交以下资料：身份证明复印件（正反面复印在同一张A4纸上）、银行卡复印件（需在复印件上手抄卡号并签名）</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>1.2 </text>
+              <text>员工报到时，须亲笔如实填报有关资料，并保证向公司提供的个人资料真实无误，若一经发现属虚报或伪造，公司有权立即将其作违纪辞退处理，无须支付任何经济补偿；                </text>
+            </view>
+
+            <view class="row" style="text-indent:4.5pt;">
+              <text>2.试用期</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.1 </text>
+              <text>试用期期限为3-6个月，试用期的工资、福利、假期等具体事项均按国家规定和公司制度执行；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.3 </text>
+              <text>试用期满个月，公司将对新员工进行阶段性考核，考核合格予以转正；考核不合格，则继续试用或中止试用；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.4 </text>
+              <text>如果员工在6个月的试用期结束后表现仍未通过评估，公司根据具体情况，与员工做调岗处理或解除劳动关系；</text>
+            </view>
+
+            <view class="row" style="text-indent:4.5pt;">
+              <text>3 薪酬</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.1 </text>
+              <text>考核与调整：员工连续2个月业绩或工作表现评估不合格的，公司将对员工进行培训，培训后仍未能符合岗位要求的，公司将根据相关规定调整员工工作岗位，薪酬执行调整               后岗位标准；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.2 </text>
+              <text>发放：员工当月的工资于次月25-27日发放，如遇休息日或节假日顺延发放；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.3 </text>
+              <text>保密:公司实行保密薪酬原则,严禁员工以任何方式向他人透露自己或探听他人的工资状况；任何泄露或探听他人工资信息者，一经发现，皆以违纪辞退处理，无须支付任何                  经济补偿；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.4 </text>
+              <text>员工应及时核对当月核发的工资，如果对公司支付的工资（包括但不限于加班工资、计算方法、计算依据、发放金额等）有异议，应在工资发放后十日内书面向人力资源部提出，否则视为无异议；如因员工未及时提出异议，逾期提出异议又无法出示证据文件、或者员工主管离职或调离无法核实证据的，公司不承担责任。</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.5 </text>
+              <text>员工对工资支付存在异议应通过正常途径反映，不得在网络社交平台及公众场合传播，一经发现予以开除处理，并视情况给予经济追偿。</text>
+            </view>   
+
+            <view class="row" style="text-indent:4.5pt;">
+              <text>4 培训</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>4.1 </text>
+              <text>上班时间参加培训，可正常发放工资；非正常上班时间参加培训，不再另行申报加班或申请补休；</text>
+            </view> 
+
+            <view class="row" style="text-indent:4.5pt;">
+              <text>5 离职</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>5.1 </text>
+              <text>试用期内员工需提前3个工作日向上级领导提交《离职申请书》，转正后员工须提前30天向上级领导提交《离职申请书》，经审批后，即可按照公司要求办理离职手续；                  </text>
+            </view>   
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>5.1 </text>
+              <text>试用期内员工需提前3个工作日向上级领导提交《离职申请书》，转正后员工须提前30天向上级领导提交《离职申请书》，经审批后，即可按照公司要求办理离职手续；                  </text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>5.2 </text>
+              <text>离职员工完成办理离职手续后，由财务部及人力资源部等相关部门对其进行费用和物料进行审核与结算，在费用结算未完成前，离职当月工资暂不发放；                               </text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>5.3 </text>
+              <text>离职人员费用结算完成后，人力资源部从其工资中扣除相应费用，其余金额在离职手续办清后第1个工资发放日进行发放；                  </text>
+            </view>  
+
+            <view class="row" style="text-indent:4.5pt;">
+              <text>6 其他</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.1员工联系电话、居住地址及婚姻状况发生变化的，必须在一周天内书面通知人力资源部；否则，由此引起的一切后果由员工个人承担；</text>
+            </view>   
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.2保证本人入职时提交信息真实、完整并与应聘时提交的一致，否则，由此引起的一切后果由员工个人承担；                  </text>
+            </view>
+
+            <view class="row">
+              <text style="font-weight:700;">二、社会保险</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>1公司按照国家有关法律、法规参加各项社会保险，社会保险费由企业及员工个人按规定或约定缴纳；员工参加社保保险后应享受的各项待遇按国家有关规定办理；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2 医疗：员工需在住院治疗前，提前1周通知公司、您的上级主管，以便于公司及时办理相关手续；若属急诊，需在入院时4小时内通知；否则，由此引起的一切后果由员工个人承担；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3 生育：参加生育险满1年的员工，需在怀孕2个月内通知公司、您的上级主管及公司人力资源部，以便于公司及时办理相关手续；否则，由此引起的一切后果由员工个人承担；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>4 工伤：员工若发生工伤事故，需在2小时内通知公司、您的上级主管并送往公立定点医院(交通事故同时报警)，以便公司及时办理工伤申报及费用报销手续，因员工个人原因延期上报工伤事故导致超过国家法定工伤事故申报期限的，事故所产生的费用由员工自行承担，公司不承担任何法律责任；</text>
+            </view>
+
+            <view class="row">
+              <text style="font-weight:700;">三、工作时间及假期</text>
+            </view>
+            <view class="row" style="text-indent:4.5pt;">
+              <text>1 工作时间</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>1.1 公司实行六天工作制，每周至少一天休息日。实际休息日由公司配合业务运作需要，必要时调整为长短周或轮值之方式；</text>
+            </view>  
+            <view class="row" style="text-indent:4.5pt;">
+              <text>2 假期  </text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.1 员工按国家法律规定享有法定节假日；</text>
+            </view>   
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.2员工申请事假、病假、婚假、丧假、工伤假、产假等假期必须提前通知公司、上级领导并以书面形式提交申请，若无书面申请视作无效。</text>
+            </view>   
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.3员工未办妥请假手续而擅自离岗或未准假而不到职者，除因临时发生急病或者其他重大事故，经事后证明情况属实且经部门主管批准者外，均视为旷工论处，扣发当天薪资之双倍；</text>
+            </view>   
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.4若员工虚报请假事由，经查证属实者，除其请假日数以旷工论处外，视为自愿解除劳动关系；</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.5 员工请假期满应主动报到上岗，逾期未到岗或未进行请假延期申请视为旷工，逾期3天未到岗视为自动离岗、员工自愿解除劳动合同，公司无需支付补偿金。</text>
+            </view>                    
+            
+             <view class="row">
+              <text style="font-weight:700;">四、考勤</text>
+            </view>
+            <view class="row" style="text-indent:4.5pt;">
+              <text>1 手机上报销量</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>1.1 公司实行手机上报销量制度，员工应按公司要求进行手机激活及上报工作.3天无正当理由不进行手机上报，或者上报信息虚假、明显偏离事实达3次，以及上报天数、销量与实际核算薪资数据差异超过公司规定的范围值的可视为严重违规，经警告后拒不改正的可以予以解除劳动合同。</text>
+            </view>   
+            <view class="row" style="text-indent:4.5pt;">
+              <text>2 迟到</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>2.1员工未按规定上班时间到驻地工作地点出勤者，视为迟到；</text>
+            </view> 
+             <view class="row" style="text-indent:4.5pt;">
+              <text>3.早退</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.1凡于上班、轮值、活动、集会、培训之出勤时间内，未经批准擅自提前离开者，视为早退；</text>
+            </view> 
+             <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>3.2当天早退时间不足4小时者，按旷工半天论处；超过4小时（包含）者，按旷工1天论处；</text>
+            </view> 
+             <view class="row" style="text-indent:4.5pt;">
+              <text>4旷工</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>4.1无出勤凭据者一律视为旷工；</text>
+            </view> 
+             <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>4.2 旷工1天，扣发当天薪资并双倍扣罚；连续旷工3天或年累计旷工达6天者，属严重违反公司规章制度，视为自动离职，公司保留按劳动合同条款进一步追偿的权利；                 </text>
+            </view> 
+            <view class="row" style="text-indent:4.5pt;">
+              <text>5 加班：</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>5.1员工在规定工作时间之外延长工作时间完成生产、工作任务谓之加班；</text>
+            </view> 
+             <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>5.2员工加班需在公司要求的情况下方可加班，并事先填写《加班申请表》，经上级领导批准后，方可加班。                 </text>
+            </view> 
+            <view class="row" style="text-indent:4.5pt;">
+              <text>6.行为准则</text>
+            </view>  
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.1工作时间内，应保持站立姿势、精神饱满、仪态端庄大方；对顾客热情、友好、第一时间接待顾客；对于不在第一时间接待顾客或者上班状态庸懒者，发现一次，处罚50元；</text>
+            </view> 
+             <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.2服从公司及商场管理人员的工作安排，认真执行公司的各项政策，积极参与公司的各项活动，真实反馈公司需了解的各种信息；对于相关信息反馈不及时或进行虚假信息传递者，视情节轻重予以50-100元的处罚；</text>
+            </view> 
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.3公司销售信息、培训资料均属公司机密，任何时间、地点不得向任何人泄露；对于泄露相关信息者，一经查实，作辞退处理，无须支付任何经济补偿；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.4不得侵占公司及商场的任何物品（含赠品），如因侵占、偷盗公司或商场的物品（含赠品），给公司造成损失的，由本人承担赔偿责任，作辞退处理，无须支付任何经济补偿；情节严重者，将送交公安部门处理；</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.5员工在职期间不得兼职其他任何品牌的销售或其他工作，一经查实，不予发放当月工资，并作辞退处理，无须支付任何经济补偿；公司将保留对员工法律追究的权利。</text>
+            </view>
+            <view class="row" style="margin-left:28.5pt;text-indent:-18.0pt;">
+              <text>6.6 员工对于公司管理及其他任何方面的问题存在异议的均应遵循合理合法的渠道进行协商和沟通,或者寻求政府机构的帮助,不得在工作场所闹事或其他影响卖场或办事处的正常运营,否则公司有权予以经济追偿及罚款.</text>
+            </view>
+
+            <view style="text-align:center;" class="row">再次欢迎您成为本公司的一员，因为有了您的加入，公司的明天将会更加辉煌！</view>
+
+            <view style="text-align:right;font-weight:700;" class="row">广东萱玥文销售服务有限公司</view>
+
+        </view>
+        <view class="modal-footer">
+
+            <view class="page-section page-section-gap">
+              <checkbox-group bindchange="checkboxChange">
+              <label class="checkbox">
+                <checkbox value="cb" checked="{{isAgree}}" class="box" bindchange="checkboxChange"/>我已阅读清楚并同意以上守则的内容             
+              </label>
+              </checkbox-group>
+            </view>       
+
+            <button class="weui-btn mini-btn {{isAgree?'tc-btn-orange':'tc-bg-default'}}" type="default" size="mini" catchtap="closeFirst">我已阅读</button>
+        
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+

@@ -1,0 +1,33 @@
+
+
+<view class="page">
+    <view class="page__bd">
+<image class="weui-article__img" src="../../../image/company.png"  style="height: 180px;width:100%;" />   
+        <view class="weui-article">
+            <view class="weui-article__h1">广东萱玥文销售服务有限公司</view>
+
+
+
+
+            <view class="weui-article__section">
+                <view class="weui-article__title">公司介绍：</view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3">详情</view>
+                    <view class="weui-article__p">
+                        广东萱玥文销售服务有限公司成立于2014年,注册资金1100万,是一家专门从事HR外包服务的公司。现公司主要服务广深地区的快消品企业。提供专业的销售外包,HR信息系统,互联网科技，法务税务咨询等一系列相关服务。公司以“诚信立足，创新致远”的发展理念,坚持以客户为中心，希望通过我们的专业知识和不懈努力,为每一位客户提供最优质最需要的服务。
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                         两年来,广东萱玥文销售服务有限公司一直秉承以客户需求为核心,在专注广东本地市场开拓的同时,致力于开展国内其他地区市场,已为多家企业提供外包服务,优质、用心的服务赢得了众多企业的信赖和好评,并在南粤地区逐渐树立起公司良好口碑。公司不仅仅提供专业的销售外包服务,同时还建立了完善的售后服务体系,为企业发展中遇到的问题和困难提供专业的指导及帮助。我们相信,通过我们的不断努力和追求卓越的精神,一定能够成为集服务优质佳，员工高素质，企业信誉好，创新能力强的综合型优秀企业。
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
+
+

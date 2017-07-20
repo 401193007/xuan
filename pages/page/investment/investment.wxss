@@ -1,0 +1,14 @@
+@import "../index/index.wxss"; 
+.weui-flex__item.btn {margin:15px 15px 0;}
+.grid .text-wrap {
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+}
+.grid .text-wrap .subtitle {
+  font-size :12px;
+  color :#999;
+}
+.text-wrap .title,.text-wrap .subtitle{
+    text-align: center;
+}

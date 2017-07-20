@@ -1,0 +1,109 @@
+  <include src="../top/top"/>
+
+  <view class="page-wrap">
+    <view class="page-head">
+      <text>考勤管理</text> > <text>请假申请</text>
+    </view>   
+
+    <view class="page-container">
+      <view class="title">请假申请</view> 
+
+      <form catchsubmit="formSubmit" catchreset="formReset">
+
+        <view class="page-section">
+
+          <view class="page-section-body">
+
+            <view class="tc-group">
+              <view class="weui-cells__title">请假类型</view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_select">
+                      <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                          <view class="weui-label">当前选择</view>
+                      </view>
+                      <view class="weui-cell__bd">
+                          <picker bindchange="bindLeavetypeChange" range="{{leavetype}}" value="{{leavetypeIndex}}" range-key="{{'text'}}">
+                              <view class="weui-select weui-select_in-select-after">{{leavetype[leavetypeIndex].text}}</view>
+                          </picker>
+                      </view>
+                  </view>
+              </view>            
+            </view>  
+
+            <view class="tc-group">
+                <view class="weui-cells__title">起止时间 <text class="tc-text-danger">*</text></view>
+                <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                      <view class="weui-label">请选择</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                      <picker mode="date" value="{{date1}}" start="2015-09-01"  bindchange="bindDateChange1" name="id_card_effective_date">
+                        <view class="weui-input">{{date1}}</view>
+                      </picker>
+                    </view>
+                  </view>
+                </view>           
+            </view>
+
+            <view class="tc-group">
+                <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                      <view class="weui-label">请选择</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                      <picker mode="date" value="{{date2}}" start="2015-09-01"  bindchange="bindDateChange2" name="id_card_expiry_date">
+                        <view class="weui-input">{{date2}}</view>
+                      </picker>
+                    </view>
+                  </view>
+                </view>  
+            </view>    
+
+            <view class="tc-group">
+              <view class="weui-cells__title">时</view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="实际时间/时" name="hours"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">分</view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="实际时间/分" name="minute"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">原因</view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入请假原因" name="reason"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>            
+
+
+          </view>
+        </view>       
+
+        <view class="btn-area">
+          <button type="primary" formType="submit" class="tc-btn-primary">提交</button>
+        </view>
+      </form>
+    </view>
+    
+  </view>
+
+

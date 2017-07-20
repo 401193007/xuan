@@ -1,0 +1,28 @@
+
+<import src="common/common" />
+<template is="commonBg" data="{{windowHeight : windowHeight,windowWidth : windowWidth}}"/>
+
+<view class="common-panel">
+
+  <template is="commonTop"/>
+
+  <view class="common-panel-rb">
+    <view class="tabs-panel">
+      <text class="name">欢迎访问</text>
+      <button class="weui-btn tc-btn-primary" bindtap="navigate" id="apply">填写入职申请</button>
+      <button class="weui-btn tc-btn-success" bindtap="navigate" id="login">我已入职，现在登录</button>
+    </view>
+  </view>
+
+</view>
+
+<view class="bottom-wrap">
+  <view class="slogan">
+    <text>用心服务</text>
+    <image style="" class="heart" src="../../../image/icon-heart.png"></image> 
+    <text>爱+共赢</text>
+  </view>
+  <view class="record">
+    <text>粤ICP备16034950号-1</text>
+  </view>
+</view>

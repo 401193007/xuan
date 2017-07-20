@@ -1,0 +1,185 @@
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view> 
+
+<view class="container">
+    <view class="tc-page-head">
+        <text>入职申请</text>
+    </view>
+    <view class="tc-m-auto page-section">
+        <view class="tc-panel-wrap">
+            <view class="panel-heading">
+                <icon type="info" size="12" color="black"/>
+                <text>文件上传</text>
+            </view>
+            <view class="panel-body">
+                <form catchsubmit="formSubmit" catchreset="formReset">
+                    <view class="fieldset">
+                          <view class="tc-group">
+                            <view class="weui-cells__title">添加银行卡方式 <text class="tc-text-danger">*</text></view>
+                            <view class="weui-cells weui-cells_after-title">
+                                <view class="weui-cell weui-cell_select">
+                                    <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                                        <view class="weui-label">请选择</view>
+                                    </view>                  
+                                    <view class="weui-cell__bd">
+                                        <picker bindchange="bindTypeChange" range="{{type}}" value="{{typeIndex}}" range-key="{{'name'}}" name="type">
+                                            <view class="weui-select weui-select_in-select-after">{{type[typeIndex].name}}</view>
+                                        </picker>
+                                    </view>
+                                </view>
+                            </view>            
+                          </view>
+
+                          <view class="dropdown {{showBank? 'show' : ''}}">
+                              <view class="tc-group">
+                                <view class="weui-cells__title">银行名称</view>
+                                <view class="weui-cells weui-cells_after-title">
+                                    <view class="weui-cell weui-cell_select">
+                                        <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                                            <view class="weui-label">请选择</view>
+                                        </view>                  
+                                        <view class="weui-cell__bd">
+                                            <picker bindchange="bindBankChange" range="{{bank}}" value="{{bankIndex}}" range-key="{{'name'}}" name="bank">
+                                                <view class="weui-select weui-select_in-select-after">{{bank[bankIndex].name}}</view>
+                                            </picker>
+                                        </view>
+                                    </view>
+                                </view>            
+                              </view>
+
+                              <view class="tc-group">
+                                <view class="weui-cells__title">银行卡号</view>
+                                <view class="weui-cells weui-cells_after-title">
+                                    <view class="weui-cell weui-cell_input">
+                                        <view class="weui-cell__bd">
+                                            <input class="weui-input" placeholder="请输入银行卡号" name="bank_card_number"/>
+                                        </view>
+                                    </view>
+                                </view>            
+                              </view>
+
+                               <view class="tc-group">
+                                  <view class="weui-cells__title">银行卡照片</view>
+                                  <view class="weui-cells__title subtitle">* 要求在银行卡复印件上写下卡号、开户支行、日期并签名 ，以图片方式上传。</view>
+
+                                      <block wx:if="{{bank_card_path}}">
+                                      <view class="file-preview">
+                                          <view class="file-preview-frame">
+                                                   <image class="weui-uploader__img" src="{{bank_card_path}}" data-src="{{bank_card_path}}" bindtap="previewImage" mode="widthFix"></image>                                                                   <view class="tc-clearfix">
+                                              <view class="tc-pull-left icon-wrap "> <view class="iconfont icon-zhengque tc-text-success"></view></view>   
+                                              <view class="tc-pull-right icon-wrap delete" catchtap="deleteBank"> <view class="iconfont icon-laji-copy tc-text-danger"></view></view>                                     
+                           </view>
+
+                                          </view>
+                                          
+                                      </view>
+                                      </block>
+
+                                  <view class="tc-input-group ">
+
+                                    <view class="form-control">
+                                      <input  class="weui-input" placeholder="{{bank_card_path}}" disabled/>
+                                    </view>
+                                    <view class="tc-input-group-btn">
+                                      <button class="weui-btn tc-btn-orange" bindtap="uploadBank"><image src="src"></image></button>
+                                    </view>
+                                  </view>
+
+                                </view>
+
+                          </view>
+
+
+                          <view class="tc-group">
+                            <view class="weui-cells__title">手持身份照片 <text class="tc-text-danger">*</text></view>
+                            <view class="weui-cells__title subtitle">请上传本人手持 本人身份证原件拍照照片 </view>
+
+                                      <block wx:if="{{id_pic_path}}">
+                                      <view class="file-preview">
+                                          <view class="file-preview-frame">
+                                              <image class="weui-uploader__img" src="{{id_pic_path}}" data-src="{{id_pic_path}}" bindtap="previewImage" mode="widthFix"></image>                                                                   <view class="tc-clearfix">
+                                              <view class="tc-pull-left icon-wrap "> <view class="iconfont icon-zhengque tc-text-success"></view></view>   
+                                              <view class="tc-pull-right icon-wrap delete" catchtap="deleteIdCard"> <view class="iconfont icon-laji-copy tc-text-danger"></view></view>                                     
+                           </view>
+
+                                          </view>
+                                          
+                                      </view>
+                                      </block>
+
+                            <view class="tc-input-group ">
+                              <view class="form-control">
+                                 <input  class="weui-input" placeholder="{{id_pic_path}}" disabled/>
+                              </view>
+                              <view class="tc-input-group-btn">
+                                <button class="weui-btn tc-btn-orange" bindtap="uploadIdCard"><image src="src"></image></button>
+                              </view>
+                            </view>
+
+                          </view>
+
+                          <view class="tc-group">
+                            <view class="weui-cells__title">身份证正面照片 <text class="tc-text-danger">*</text></view>
+                            <view class="weui-cells__title subtitle">请上传本人第二代居民身份证正面照片 </view>
+
+                                      <block wx:if="{{id_front_path}}">
+                                        <view class="file-preview">
+                                            <view class="file-preview-frame">
+                                                    <image class="weui-uploader__img" src="{{id_front_path}}" data-src="{{id_front_path}}" bindtap="previewImage" mode="widthFix"></image>                                                                   <view class="tc-clearfix">
+                                                <view class="tc-pull-left icon-wrap "> <view class="iconfont icon-zhengque tc-text-success"></view></view>   
+                                                <view class="tc-pull-right icon-wrap delete" catchtap="deleteIdFront"> <view class="iconfont icon-laji-copy tc-text-danger"></view></view>                                     
+                            </view>
+
+                                            </view>
+                                            
+                                        </view>
+                                      </block>
+
+                            <view class="tc-input-group ">
+                              <view class="form-control">
+                                <input  class="weui-input" placeholder="{{id_front_path}}" disabled/>
+                              </view>
+                              <view class="tc-input-group-btn">
+                                <button class="weui-btn tc-btn-orange" bindtap="uploadIdFront"><image src="src"></image></button>
+                              </view>
+                            </view>
+
+                          </view>
+
+                          <view class="tc-group">
+                            <view class="weui-cells__title">身份证背面照片 <text class="tc-text-danger">*</text></view>
+                            <view class="weui-cells__title subtitle">请上传本人第二代居民身份证背面照片</view>
+
+                                      <block wx:if="{{id_back_path}}">
+                                        <view class="file-preview">
+                                            <view class="file-preview-frame">
+                                                    <image class="weui-uploader__img" src="{{id_back_path}}" data-src="{{id_back_path}}" bindtap="previewImage" mode="widthFix"></image>                                                                   <view class="tc-clearfix">
+                                                <view class="tc-pull-left icon-wrap "> <view class="iconfont icon-zhengque tc-text-success"></view></view>   
+                                                <view class="tc-pull-right icon-wrap delete" catchtap="deleteIdBack"> <view class="iconfont icon-laji-copy tc-text-danger"></view></view>                                     
+                            </view>
+
+                                            </view>
+                                            
+                                        </view>
+                                      </block>
+
+                                      <view class="tc-input-group ">
+                                        <view class="form-control">
+                                          <input  class="weui-input" placeholder="{{id_back_path}}" disabled/>
+                                        </view>
+                                        <view class="tc-input-group-btn">
+                                          <button class="weui-btn tc-btn-orange" bindtap="uploadIdBack"><image src="src"></image></button>
+                                        </view>
+                                      </view>
+
+                          </view>
+
+
+                    </view>
+                    <view class="tc-submit-wrap tc-group">
+                        <button class="tc-next tc-btn-primary" formType="submit">下一步</button>
+                    </view>
+                </form>
+            </view>
+        </view>
+    </view>
+</view>

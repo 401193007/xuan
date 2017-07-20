@@ -1,0 +1,52 @@
+<import src="step_head" />
+
+<template is="step_head" data="{{title: '申请招商引资',subtitle: '第三步'}}"/>
+
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>  
+
+            <view class="step_context">营业执照上传</view>
+
+            <view class="page-section">
+
+                <view class="weui-cells">
+                <view class="weui-cell">
+                    <view class="weui-cell__bd">
+                    <view class="weui-uploader">
+                        <view class="weui-uploader__hd">
+                        <view class="weui-uploader__title">点击可预览选好的图片</view>
+                        <view class="weui-uploader__info">{{imageList.length}}/{{count[countIndex]}}</view>
+                        </view>
+                        <view class="weui-uploader__bd">
+                        <view class="weui-uploader__files">
+                            <block wx:for="{{imageList}}" wx:for-item="image">
+                            <view class="weui-uploader__file">
+                                <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+                            </view>
+                            </block>
+                        </view>
+
+  
+
+                        <!--<view class="weui-uploader__input-box">
+                            <view class="weui-uploader__input" bindtap="chooseImage"></view>-->
+                        <!--</view>-->
+                        </view>
+
+                        <view class="tc-group">
+                            <button class="weui-btn tc-btn-primary" bindtap="chooseImage" size="mini">选择图片</button>
+                        </view>   
+
+                    </view>
+                    </view>
+                </view>
+                </view>
+
+            </view>
+
+            <view class="tc-group">
+                <button class="weui-btn tc-btn-primary" bindtap="step_3">下一步</button>
+            </view>        
+    </view>
+</view>

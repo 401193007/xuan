@@ -1,0 +1,43 @@
+  <include src="../top/top"/>
+
+  <view class="page-wrap">
+    <view class="page-head">
+      <text>首页</text> > <text>请假列表</text>
+    </view>   
+
+    <view class="page-container">
+      <view class="title">请假列表</view> 
+
+      <navigator url="leave_form" open-type="redirect" hover-class="none">
+        <button class="weui-btn mini-btn tc-btn-primary" size="mini">请假申请</button>
+      </navigator>
+      
+           <view class="table">
+            <view class="tr bg-w">
+              <view class="th">ID</view>
+              <view class="th">请假类型</view>
+              <view class="th">请假原因</view>
+              <view class="th">起止时间</view>
+              <view class="th">实际请假时间</view>
+              <view class="th">状态</view>
+              
+            </view>
+
+        <view class="tr" wx:for="{{content_list}}">
+            <view class="td">{{item.leave_id}}</view>
+            <view class="td">{{item.typeCN}}</view>
+            <view class="td">{{item.reason}}</view>
+            <view class="td">{{item.start_time}} - {{item.end_time}}</view>
+            <view class="td">{{item.actual_time}}</view>      
+            <view class="td">{{item.statusCN}}</view>        
+        </view> 
+
+          </view>         
+
+  
+
+    </view>
+    
+  </view>
+
+

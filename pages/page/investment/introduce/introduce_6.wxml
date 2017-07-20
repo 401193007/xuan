@@ -1,0 +1,28 @@
+<view class="page" style="background-color:#fff;">
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">政策支持
+</view>
+            <view class="weui-article__section">
+              
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                        可享受人才引进、培养、奖励政策，人才落户、“绿卡”政策，人才创新创业支持、人才开发平台载体支持，“干企万人”支持计划，“慧聚武清”高层次人才引进工程、本土“鲲鹏工程”等服务政策支持。
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                        加强对初创期、成长期科技型企业的支持；对引进的国家级科研院所与共建研发转化基地、企业重点实验室、工程中心、境外研发机构给予补助；对首次获批的国家级高新技术企业给予奖励；设立6000万元政府引导资金，用于加速武清区主要产业及战略新兴产业引进聚集；加强金融支持，对获得贷款企业给予贴息支持；设立科技型企业专利试点、专利资助资金、创新资金扶持；实施品牌战略，对获评品牌企业给予扶持。
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__p">
+                        鼓励企业融资租赁，对融资租赁综合费用给予补贴；鼓励企业制订技术标准，给予资助；鼓励企业节能改造，对节能量在100吨标准煤以上的企业给予补贴；支持转型企业发展电子商务，对平台服务费给予补贴；支持开展技能培训，针对年度新增规上工业、服务业企业给予一定额度的资金补贴等。
+
+
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

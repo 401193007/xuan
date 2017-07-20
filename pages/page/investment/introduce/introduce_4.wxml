@@ -1,0 +1,52 @@
+<view class="page" style="background-color:#fff;">
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">综合配套
+</view>
+            <view class="weui-article__section">
+              
+                <view class="weui-article__section">
+                    <view class="weui-article__h3 tc-text-primary">生产配套</view>
+                    <view class="weui-article__p">
+                        武清区内设有中国武清海关、武清检验检疫局、武清国际保税物流园，在区内可办理全部进出口和保税商贸业务。
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3 tc-text-primary">生活配套</view>
+                    <view class="weui-article__p">
+                        园区提供金融机构、教育医疗、文化休闲、餐饮会务、人才公寓等服务，东部金泉湖及周边14平方公里区域正在开发建设为集生态居住、商务办公、旅游休闲度假为一体的生态宜居区域；
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3 tc-text-primary">行政审批</view>
+                    <view class="weui-article__p">
+                        园区实现封闭式管理，为企业提供一站式办公、一条龙服务，设有行政许可中心，一窗口对外受理各种审批。
+
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3 tc-text-primary">人力资源</view>
+                    <view class="weui-article__p">
+                        劳动力素质高，资源丰富，用工稳定；接受京津两地百余所大学和科研机构的辐射优势，为企业创新、发展提供了坚实的人才基础。
+
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3 tc-text-primary">教育资源</view>
+                    <view class="weui-article__p">
+                        区内英华国际学校、黑利伯瑞国际学校、北大公学国际学校提供从学前至高中的双语教育；以杨村一中代表的初、高级教育教学质量优秀，高考升学率历年名列全市第一。
+
+                    </view>
+                </view>
+                <view class="weui-article__section">
+                    <view class="weui-article__h3 tc-text-primary">自然资源</view>
+                    <view class="weui-article__p">
+                        园区紧邻大黄堡湿地自然保护区。，该湿地为华北地区为数不多的典型沼泽湿地生态系统，为维护生态平衡、改善区域生态状况、促进区域经济社会可持续发展发挥了重要作用。
+
+
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

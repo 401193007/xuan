@@ -1,0 +1,109 @@
+{
+  "pages":[ 
+    
+    "pages/page/index/index",
+    "pages/page/index/company_introduction",
+    "pages/page/tool/tool",
+    "pages/page/my/my",
+    "pages/page/my/concat",
+
+    "pages/page/affair/personal_data2/personal_data2",
+    "pages/page/affair/personal_data/personal_data",
+    
+
+    "pages/page/affair/industrial_injury/industrial_injury_form",
+    "pages/page/affair/industrial_injury/industrial_injury",
+
+
+    "pages/page/affair/leave/leave",
+    "pages/page/affair/leave/leave_form",
+
+    "pages/page/affair/sign/sign",    
+
+
+    "pages/page/affair/social_security/social_security",
+    "pages/page/affair/social_security/social_security_form",
+    
+
+    "pages/page/affair/medical_reimbursement/medical_reimbursement_form",
+    "pages/page/affair/medical_reimbursement/medical_reimbursement",
+
+    "pages/page/affair/maternity_reimbursement/maternity_reimbursement",
+    "pages/page/affair/maternity_reimbursement/maternity_reimbursement_form",
+
+    "pages/page/affair/choose",
+    "pages/page/affair/common/common",
+    "pages/page/affair/login",
+    "pages/page/affair/forget",
+    "pages/page/affair/forget_step2",    
+    "pages/page/affair/forget_step3", 
+    
+    "pages/page/affair/entry/index",
+    "pages/page/affair/entry/index_1",
+    "pages/page/affair/entry/index_2",
+    "pages/page/affair/entry/index_3",
+   
+
+    
+    "pages/page/investment/step/step",
+    "pages/page/investment/step/step_1",
+    "pages/page/investment/step/step_2",
+    "pages/page/investment/step/step_3",
+    "pages/page/investment/step/step_4",
+    "pages/page/investment/step/step_head",    
+
+    "pages/page/investment/introduce/introduce_5",
+    "pages/page/investment/introduce/introduce_6",
+    "pages/page/investment/introduce/introduce_4",
+    "pages/page/investment/introduce/introduce_3",
+    "pages/page/investment/introduce/introduce_2",
+    "pages/page/investment/introduce/introduce_1",
+    "pages/page/investment/introduce/introduce",    
+
+    "pages/panel/login/login",
+    "pages/panel/register/register",
+    "pages/panel/forget/forget",
+    "pages/panel/forget/forget_step2",
+    "pages/panel/success/success",    
+
+
+
+
+    "pages/page/affair/index/index",
+    "pages/page/affair/modify_information/modify_information",   
+
+    
+    "pages/page/affair/top/top",
+
+    "pages/page/investment/investment",
+    "pages/page/investment/investment_details",
+    "pages/page/investment/investment_list"    
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "心怡HR",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "borderStyle" : "black",
+    "selectedColor" : "#4891d1",
+    "list": [{
+      "pagePath": "pages/page/index/index",
+      "iconPath" : "image/index.png",
+      "selectedIconPath": "image/index-selected.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/page/tool/tool",
+      "iconPath" : "image/tool.png",
+      "selectedIconPath": "image/tool-selected.png",
+      "text": "工具"
+    },{
+      "pagePath": "pages/page/my/my",
+      "iconPath" : "image/my.png",
+      "selectedIconPath": "image/my-selected.png",
+      "text": "我的" 
+    }]
+  }  
+}

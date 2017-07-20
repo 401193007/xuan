@@ -1,0 +1,26 @@
+<import src="step_head" />
+
+<template is="step_head" data="{{title: '申请招商引资',subtitle: '第四步'}}"/>
+
+<view class="page">
+    <view class="page__bd">
+
+
+        <view class="weui-msg">
+            <view class="weui-msg__icon-area">
+                <icon type="success" size="93"></icon>
+            </view>
+            <view class="weui-msg__text-area">
+                <view class="weui-msg__title">您的招商引资申请已经提交成功系统正在审核，请稍等</view>
+            </view>
+            <view class="weui-msg__opr-area">
+                <view class="weui-btn-area">
+                    <button class="weui-btn tc-btn-primary" type="primary" bindtap="return">马上返回招商引资首页</button>
+                </view>
+            </view>
+        </view>
+
+
+    </view>
+</view>
+

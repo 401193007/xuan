@@ -1,0 +1,23 @@
+
+.container{width:100%;height:100%;padding:0;margin:0 auto;background: #fff;}
+.container .tc-page-head{padding:0 15px;font-size: 14px;color: #fff;background: #82d4ff;line-height: 36px;margin-bottom: 10px;}
+.container .tc-m-auto{margin: 0 15px;}
+.container .tc-panel-wrap{margin-bottom: 20px;border-radius: 4px;box-shadow: 0 1px 1px rgba(0,0,0,.05);}
+.container .panel-heading{font-size: 16px;padding: 10px 15px;line-height: 10px;}
+.container .panel-body{padding: 0 15px;}
+.container .fieldset{background-color: #f0f0f0;padding: 15px 5px;}
+.container .form-group{margin-bottom: 15px;padding: 0 15px;}
+.container .label {display: inline-block;max-width: 100%;margin-bottom: 5px;font-weight: 700;}
+.container .label i{color: darkred;font-size: 14px;}
+.container .li {display: block;height: 34px; padding: 3px 12px;font-size: 14px;color: #555;background-color: #fff;background-image: none;border: 1px solid #ccc;border-radius: 4px;-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);box-shadow: inset 0 1px 1px rgba(0,0,0,.075);position: relative;}
+.container .li::after{content: "∨";position: absolute;right: 15px;color: #ccc;top:10px;font-weight: 700;}
+.container .li .select-item{line-height: 34px;}
+.container .tc-info{font-size: 14px;color: #ccc;padding-bottom: 15px;}
+.container .tc-info text{color: darkred;font-weight: 700;font-size: 16px;}
+.container .tc-submit-wrap{padding-bottom: 15px;}
+.container .tc-btn-primary{font-size: 14px;color: #fff;background-color: cornflowerblue;border-radius: 6px;}
+.container .tc-prev{margin-bottom:15px;background: chartreuse;}
+
+.dropdown {display: none;}
+.dropdown.show {display: block;}
+.container .panel-heading text {margin-left: 5px;}

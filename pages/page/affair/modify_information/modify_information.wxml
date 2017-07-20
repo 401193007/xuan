@@ -1,0 +1,117 @@
+  <include src="../top/top"/>
+
+<view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{errorMsg}}</view>  
+
+  <view class="page-wrap">
+
+    <view class="page-container">     
+
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                
+                    <form catchsubmit="submitInfo">
+
+                      <view class="page-section" >
+
+                        <view class="page-section-body" style="background-color :#fff;">
+
+                          <view class="tc-group">
+                            <view class="weui-cells__title">手机号码</view>
+                            <view class="weui-cells weui-cells_after-title">
+                                <view class="weui-cell weui-cell_input">
+                                    <view class="weui-cell__bd">
+                                        <input class="weui-input" placeholder="请输入手机号码" value="{{STAFF_MOBILE}}" name="mobile"/>
+                                    </view>
+                                </view>
+                            </view>            
+                          </view>
+
+                          <view class="tc-group">
+                            <view class="weui-cells__title">账户密码</view>
+                            <view class="weui-cells weui-cells_after-title">
+                                <view class="weui-cell weui-cell_input">
+                                    <view class="weui-cell__bd">
+                                        <input class="weui-input" placeholder="请输入密码" name="password" password/>
+                                    </view>
+                                </view>
+                            </view>            
+                          </view>
+
+                        </view>
+                      </view>       
+
+                      <view class="btn-area">
+                        <button type="primary" formType="submit" class="tc-btn-primary">提交</button>
+                      </view>
+                    </form>
+
+
+                </view>
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                
+                    <form catchsubmit="submitpassword">
+
+                      <view class="page-section" >
+
+                        <view class="page-section-body" style="background-color :#fff;">
+
+                          <view class="tc-group">
+                            <view class="weui-cells__title">旧密码</view>
+                            <view class="weui-cells weui-cells_after-title">
+                                <view class="weui-cell weui-cell_input">
+                                    <view class="weui-cell__bd">
+                                        <input class="weui-input" placeholder="请输入旧密码" name="old" type="password"/>
+                                    </view>
+                                </view>
+                            </view>            
+                          </view>
+
+                          <view class="tc-group">
+                            <view class="weui-cells__title">新密码</view>
+                            <view class="weui-cells weui-cells_after-title">
+                                <view class="weui-cell weui-cell_input">
+                                    <view class="weui-cell__bd">
+                                        <input class="weui-input" placeholder="请输入新密码" name="password" type="password"/>
+                                    </view>
+                                </view>
+                            </view>            
+                          </view>
+
+                          <view class="tc-group">
+                            <view class="weui-cells__title">确认新密码</view>
+                            <view class="weui-cells weui-cells_after-title">
+                                <view class="weui-cell weui-cell_input">
+                                    <view class="weui-cell__bd">
+                                        <input class="weui-input" placeholder="请再次输入新密码" name="repassword" type="password"/>
+                                    </view>
+                                </view>
+                            </view>            
+                          </view>
+
+                        </view>
+                      </view>       
+
+                      <view class="btn-area">
+                        <button type="primary" formType="submit" class="tc-btn-primary">提交</button>
+                      </view>
+                    </form>
+                
+                </view>
+            </view>
+        </view>
+  
+
+    </view>
+    
+  </view>
+
+

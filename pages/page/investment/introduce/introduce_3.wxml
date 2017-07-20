@@ -1,0 +1,30 @@
+<view class="page" style="background-color:#fff;">
+    <view class="page__bd">
+        <view class="weui-article">
+            <view class="weui-article__h1">区位交通
+</view>
+            <view class="weui-article__section">
+              
+                <view class="weui-article__section">
+<view class="weui-article__p">
+                        <image class="weui-article__img" src="../../../../image/3.jpg" mode="aspectFit" style="width:100%;" />
+                    </view>                   
+                    <view class="weui-article__p">
+                        京津塘高速、京津高速、滨保高
+速3条高速公路辐射园区。其中京津
+高速出口直接与园区主景观大道相
+连接，且园区周边10分钟车程内有3
+个高速公路出口，并有三条主干公
+路在园区内周边。京津城际快速铁
+路在武清设有京津间唯一经停站，
+去北京市区21分钟车程。去天津市
+区11分钟车程。
+
+                    </view>
+                </view>
+
+
+            </view>
+        </view>
+    </view>
+</view>

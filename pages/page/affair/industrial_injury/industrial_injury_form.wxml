@@ -1,0 +1,82 @@
+  <include src="../top/top"/>
+<view class="weui-toptips weui-toptips_warn subToptips" wx:if="{{showTopTips}}">{{errorMsg}}</view>  
+
+
+  <view class="page-wrap">
+    <view class="page-head">
+      <text>社保相关</text> > <text>工伤报告</text>
+    </view>   
+
+    <view class="page-container">
+      <view class="title">工伤报告</view> 
+
+      <form catchsubmit="formSubmit" catchreset="formReset">
+
+        <view class="page-section">
+
+          <view class="page-section-body">
+
+            <view class="tc-group">
+              <view class="weui-cells__title">姓名</view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input disabled">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入姓名" name="name" disabled value="{{staffName}}"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">身份证号码</view>
+              <view class="weui-cells weui-cells_after-title">
+                  <view class="weui-cell weui-cell_input disabled">
+                      <view class="weui-cell__bd">
+                          <input class="weui-input" placeholder="请输入身份证号码" name="phone" disabled value="{{id_number}}"/>
+                      </view>
+                  </view>
+              </view>            
+            </view>
+
+            <view class="tc-group">
+              <view class="weui-cells__title">工伤报告文件</view>
+              <view class="weui-cells__title">请用编写好工伤报告的Word文档（ <text class="tc-text-danger">doc 或 docx 格式</text> ）并提交相关人员。 <text class="tc-text-primary" catchtap="downFile">点击此处下载模板文档</text></view>
+
+              <!--<block wx:if="{{id_pic_path}}">
+              <view class="file-preview">
+                  <view class="file-preview-frame">
+                      <image class="weui-uploader__img" src="{{id_pic_path}}" data-src="{{id_pic_path}}" bindtap="previewImage" mode="widthFix"></image>                                                                   <view class="tc-clearfix">
+                      <view class="tc-pull-left icon-wrap "> <view class="iconfont icon-zhengque tc-text-success"></view></view>   
+                      <view class="tc-pull-right icon-wrap delete" catchtap="deleteIdCard"> <view class="iconfont icon-laji-copy tc-text-danger"></view></view>                                     
+    </view>
+
+                  </view>
+                  
+              </view>
+              </block>
+
+
+              <view class="tc-input-group ">
+                <view class="form-control">
+                    <input  class="weui-input" placeholder="{{id_pic_path}}" disabled/>
+                </view>
+                <view class="tc-input-group-btn">
+                  <button class="weui-btn tc-btn-orange" bindtap="uploadIdCard"></button>
+                </view>
+              </view>    -->
+
+            </view>
+
+
+          </view>
+        </view>       
+
+        <view class="btn-area">
+          <button type="primary" formType="submit" class="tc-btn-default disabled" disabled>提交</button>
+        </view>
+      </form>
+    </view>
+    
+  </view>
+
+

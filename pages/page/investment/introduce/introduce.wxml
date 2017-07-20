@@ -1,0 +1,49 @@
+<view>
+  <swiper circular="true" class="swiper-container" indicator-dots="true"
+  autoplay="true" interval="5000" duration="500" style="height:240px;">
+      <swiper-item>
+        <image src="../../../../image/1.jpg" class="slide-image" style="width:100%;"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../../../image/2.jpg" class="slide-image" style="width:100%;"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../../../image/3.jpg" class="slide-image" style="width:100%;"/>
+      </swiper-item>
+  </swiper>
+</view>
+
+
+<view class="page">
+    <view class="page__bd">
+
+        <view class="weui-cells__title">天津武清区汽车产业园招商引资宣传</view>
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="introduce_1" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">我们在武清</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="introduce_2" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">魅力武清</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="introduce_3" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">区位交通</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="introduce_4" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">综合配套</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="introduce_5" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">产业规划</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="introduce_6" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">政策支持
+</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+        </view>
+    </view>
+</view>
